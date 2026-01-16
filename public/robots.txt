@@ -1,11 +1,11 @@
 # robots.txt for AeroEBT by SkyDynamics
-# https://aeroebt.skydynamics.aero
+# https://lidakis.github.io/aeroebt/
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://aeroebt.skydynamics.aero/sitemap.xml
+Sitemap: https://lidakis.github.io/aeroebt/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

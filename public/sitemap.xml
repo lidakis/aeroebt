@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aeroebt.skydynamics.aero/</loc>
+    <loc>https://lidakis.github.io/aeroebt/</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://aeroebt.skydynamics.aero/#/aeroebt</loc>
+    <loc>https://lidakis.github.io/aeroebt/#/aeroebt</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://aeroebt.skydynamics.aero/#/aerobrain</loc>
+    <loc>https://lidakis.github.io/aeroebt/#/aerobrain</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://aeroebt.skydynamics.aero/#/tms</loc>
+    <loc>https://lidakis.github.io/aeroebt/#/tms</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aeroebt.skydynamics.aero/#/fsms</loc>
+    <loc>https://lidakis.github.io/aeroebt/#/fsms</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aeroebt.skydynamics.aero/#/plans</loc>
+    <loc>https://lidakis.github.io/aeroebt/#/plans</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aeroebt.skydynamics.aero/#/about</loc>
+    <loc>https://lidakis.github.io/aeroebt/#/about</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://aeroebt.skydynamics.aero/#/contact</loc>
+    <loc>https://lidakis.github.io/aeroebt/#/contact</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://aeroebt.skydynamics.aero/#/faq</loc>
+    <loc>https://lidakis.github.io/aeroebt/#/faq</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
