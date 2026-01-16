@@ -1,0 +1,121 @@
+/* ============================================
+   COOKIE CONSENT - Light Mode
+   ============================================ */
+
+.cookie-consent-overlay {
+  position: fixed;
+  bottom: var(--space-6);
+  left: var(--space-6);
+  right: var(--space-6);
+  z-index: var(--z-modal);
+  pointer-events: none;
+}
+
+.cookie-consent-box {
+  max-width: 480px;
+  margin-left: auto;
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-2xl);
+  pointer-events: auto;
+  position: relative;
+}
+
+.cookie-consent-box p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-5);
+  max-width: none;
+  line-height: 1.6;
+}
+
+.cookie-consent-actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.cookie-consent-actions .decline-button {
+  padding: var(--space-2) var(--space-4);
+  background: transparent;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cookie-consent-actions .decline-button:hover {
+  border-color: var(--color-primary-500);
+  color: var(--color-primary-500);
+}
+
+.cookie-consent-actions .accept-button {
+  padding: var(--space-2) var(--space-4);
+  background: var(--gradient-cta);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-on-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cookie-consent-actions .accept-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.close-button {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--text-tertiary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.close-button:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.close-button img {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 640px) {
+  .cookie-consent-overlay {
+    left: var(--space-4);
+    right: var(--space-4);
+    bottom: var(--space-4);
+  }
+
+  .cookie-consent-box {
+    max-width: none;
+  }
+
+  .cookie-consent-actions {
+    flex-direction: column;
+  }
+
+  .cookie-consent-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+}
