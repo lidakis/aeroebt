@@ -3,8 +3,11 @@ import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { 
   Menu, X, ChevronDown, Plane, Brain, GraduationCap, Building2, 
-  Mail, Shield, Award, FileCheck, Lock, CheckCircle2, ArrowRight
+  Mail, Shield, Award, FileCheck, Lock, CheckCircle2, ArrowRight,
+  Sun, Moon
 } from 'lucide-react'
+import { useAppDispatch, useAppSelector } from '../store/hooks'
+import { toggleTheme, setTheme } from '../store/slices/uiSlice'
 import './Header.css'
 
 const solutions = [
@@ -58,6 +61,8 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const location = useLocation()
+  const dispatch = useAppDispatch()
+  const theme = useAppSelector((state) => state.ui.theme)
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20)
@@ -69,6 +74,18 @@ export default function Header() {
     setMobileMenuOpen(false)
     setActiveDropdown(null)
   }, [location])
+
+  // Initialize theme on mount
+  useEffect(() => {
+    const stored = localStorage.getItem('theme')
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.setAttribute('data-theme', stored)
+      dispatch(setTheme(stored))
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark')
+      dispatch(setTheme('dark'))
+    }
+  }, [dispatch])
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
@@ -157,6 +174,21 @@ export default function Header() {
         </nav>
 
         <div className="header-actions">
+          <button
+            className="theme-toggle"
+            onClick={() => dispatch(toggleTheme())}
+            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+          >
+            <motion.div
+              key={theme}
+              initial={{ rotate: -30, opacity: 0 }}
+              animate={{ rotate: 0, opacity: 1 }}
+              exit={{ rotate: 30, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+            </motion.div>
+          </button>
           <a href="mailto:ebt@skydynamics.aero" className="btn btn-primary">
             <Mail size={16} />
             Request Demo

@@ -148,6 +148,54 @@
   --z-tooltip: 400;
 }
 
+/* ============================================
+   DARK THEME
+   ============================================ */
+[data-theme="dark"] {
+  /* Background Colors */
+  --bg-primary: #0a0f1a;
+  --bg-secondary: #0f1625;
+  --bg-tertiary: #151d2e;
+  --bg-card: #121a2a;
+  --bg-card-hover: #1a2438;
+  --bg-glass: rgba(15, 22, 37, 0.9);
+
+  /* Text Colors */
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #64748b;
+
+  /* Border Colors */
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.12);
+  --border-subtle: rgba(255, 255, 255, 0.04);
+
+  /* Gradients - Dark Mode */
+  --gradient-hero: linear-gradient(180deg, #0a0f1a 0%, #0f1625 40%, #0a0f1a 100%);
+  --gradient-card: linear-gradient(180deg, #121a2a 0%, #0f1625 100%);
+  --gradient-mesh: radial-gradient(at 40% 20%, rgba(0, 132, 255, 0.12) 0px, transparent 50%),
+                   radial-gradient(at 80% 0%, rgba(0, 102, 179, 0.1) 0px, transparent 50%),
+                   radial-gradient(at 0% 50%, rgba(16, 185, 129, 0.06) 0px, transparent 50%);
+
+  /* Shadows - Dark Mode */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.5), 0 4px 10px -4px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 40px -5px rgba(0, 0, 0, 0.6), 0 8px 16px -6px rgba(0, 0, 0, 0.4);
+  --shadow-2xl: 0 25px 60px -12px rgba(0, 0, 0, 0.7);
+  --shadow-card: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 2px 4px rgba(0, 0, 0, 0.3), 0 12px 24px -4px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 0 0 1px rgba(0, 132, 255, 0.2), 0 4px 8px rgba(0, 0, 0, 0.3), 0 24px 48px -8px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 60px -10px rgba(0, 132, 255, 0.4);
+
+  /* Adjusted Primary Colors for Dark */
+  --color-primary-50: rgba(0, 102, 179, 0.1);
+  --color-primary-100: rgba(0, 102, 179, 0.15);
+  --color-green-50: rgba(16, 185, 129, 0.1);
+  --color-green-100: rgba(16, 185, 129, 0.15);
+  --color-gold-100: rgba(245, 158, 11, 0.15);
+}
+
 /* Reset & Base */
 *, *::before, *::after {
   box-sizing: border-box;

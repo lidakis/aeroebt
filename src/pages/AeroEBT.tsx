@@ -53,7 +53,7 @@ const mainFeatures = [
 const scenarioFeatures = [
   { icon: CheckCircle2, title: 'EASA/ICAO Compliant', desc: 'Create scenarios according to the latest regulatory standards.' },
   { icon: Brain, title: 'AI-Powered Generation', desc: 'AeroBrain integration for intelligent scenario suggestions.' },
-  { icon: RefreshCw, title: 'Real-Time Collaboration', desc: 'Build scenarios with team members simultaneously.' },
+  { icon: BarChart3, title: 'SMS & FDM Integration', desc: 'Connect to your SMS system for real FDM data per pilot, generating tailor-made scenarios without leaving the main scenario spine.' },
   { icon: Layers, title: 'Drag & Drop Builder', desc: 'Intuitive interface for rapid scenario development.' },
   { icon: Shield, title: 'Compliance Validation', desc: 'Automatic checks ensure regulatory compliance.' },
   { icon: Lock, title: 'Secure Distribution', desc: 'Controlled access and secure scenario sharing.' }

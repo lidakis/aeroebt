@@ -34,7 +34,7 @@ const timeline = [
   { year: '2008', title: 'Company Founded', desc: 'SkyDynamics established in Crete, Greece with a vision to modernize aviation training.' },
   { year: '2012', title: 'First EBT Solution', desc: 'Launched the first version of AeroEBT, pioneering digital evidence-based training.' },
   { year: '2018', title: 'AI Integration', desc: 'Introduced AeroBrain, our advanced AI analytics platform for training optimization.' },
-  { year: '2024', title: 'Global Expansion', desc: 'Now serving 50+ airlines and training organizations across the globe.' }
+  { year: '2024', title: 'Global Expansion', desc: 'Now trusted by well-known airlines and training organizations worldwide for their EBT programs.' }
 ]
 
 const certifications = [
