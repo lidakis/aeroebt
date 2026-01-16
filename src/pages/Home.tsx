@@ -2,7 +2,8 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import {
   ArrowRight, Plane, Brain, GraduationCap, Building2, Shield, Lock,
-  CheckCircle2, FileCheck, Award, Mail, Server, Cpu, BarChart3
+  CheckCircle2, FileCheck, Award, Mail, Server, Cpu, BarChart3,
+  Wrench, Tablet, Link2
 } from 'lucide-react'
 import './Home.css'
 
@@ -87,6 +88,30 @@ const uniqueFeatures = [
     icon: Award, 
     title: 'From Instructors, For Instructors', 
     desc: 'Built by pilots and instructors with 16+ years of aviation training expertise. We understand your challenges because we\'ve lived them.' 
+  }
+]
+
+const integrations = [
+  {
+    icon: Wrench,
+    title: 'FleetSnap Integration',
+    subtitle: 'Aircraft Maintenance',
+    desc: 'Seamlessly integrated with FleetSnap for comprehensive aircraft maintenance tracking. Connect training data with maintenance schedules, ensuring crew competency aligns with fleet readiness.',
+    color: '#ef4444'
+  },
+  {
+    icon: Tablet,
+    title: 'AeroEFB Integration',
+    subtitle: 'Electronic Flight Bag',
+    desc: 'Full integration with AeroEFB for a complete cockpit solution. Synchronize training records, qualifications, and operational data directly with your Electronic Flight Bag system.',
+    color: '#3b82f6'
+  },
+  {
+    icon: Brain,
+    title: 'AeroBrain.ai Integration',
+    subtitle: 'Artificial Intelligence',
+    desc: 'The most advanced AI system for airlines, deeply integrated with AeroEBT. Leverage machine learning for predictive training analytics and intelligent scenario recommendations.',
+    color: '#f59e0b'
   }
 ]
 
@@ -230,6 +255,56 @@ export default function Home() {
                 </div>
                 <h3>{feature.title}</h3>
                 <p>{feature.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Integrations */}
+      <section className="integrations-section section-lg">
+        <div className="container">
+          <motion.div
+            className="section-header text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.span className="section-label" variants={fadeInUp}>
+              <Link2 size={16} style={{ display: 'inline', marginRight: '8px' }} />
+              Seamless Integrations
+            </motion.span>
+            <motion.h2 variants={fadeInUp}>
+              Connected <span className="text-gradient">Ecosystem</span>
+            </motion.h2>
+            <motion.p variants={fadeInUp}>
+              AeroEBT integrates with industry-leading aviation solutions to provide 
+              a complete, unified platform for all your operational needs.
+            </motion.p>
+          </motion.div>
+
+          <motion.div 
+            className="integrations-grid"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {integrations.map((integration, idx) => (
+              <motion.div key={idx} className="integration-card" variants={fadeInUp}>
+                <div className="integration-icon" style={{ background: `${integration.color}15`, color: integration.color }}>
+                  <integration.icon size={32} />
+                </div>
+                <div className="integration-content">
+                  <span className="integration-subtitle">{integration.subtitle}</span>
+                  <h3>{integration.title}</h3>
+                  <p>{integration.desc}</p>
+                </div>
+                <div className="integration-badge" style={{ background: integration.color }}>
+                  <CheckCircle2 size={14} />
+                  Fully Integrated
+                </div>
               </motion.div>
             ))}
           </motion.div>

@@ -2,7 +2,8 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import {
   ArrowRight, GraduationCap, CheckCircle2, Layers, Users, RefreshCw,
-  FileText, BarChart3, Tablet, Shield, Lock, Brain, Cpu, Mail
+  FileText, BarChart3, Tablet, Shield, Lock, Brain, Cpu, Mail,
+  Wrench, Link2
 } from 'lucide-react'
 import './ProductPage.css'
 
@@ -68,6 +69,30 @@ const competencies = [
   'Application of Procedures', 'Communication', 'Flight Path Management (Automation)',
   'Flight Path Management (Manual)', 'Leadership & Teamwork', 'Problem Solving & Decision Making',
   'Situation Awareness', 'Workload Management', 'Knowledge'
+]
+
+const platformIntegrations = [
+  {
+    icon: Wrench,
+    title: 'FleetSnap',
+    subtitle: 'Aircraft Maintenance',
+    desc: 'Full integration with FleetSnap for comprehensive maintenance tracking. Connect training data with fleet maintenance schedules to ensure crew competencies align with aircraft readiness.',
+    color: '#ef4444'
+  },
+  {
+    icon: Tablet,
+    title: 'AeroEFB',
+    subtitle: 'Electronic Flight Bag',
+    desc: 'Seamless synchronization with AeroEFB. Access training records, qualifications, and operational data directly from your Electronic Flight Bag system during operations.',
+    color: '#3b82f6'
+  },
+  {
+    icon: Brain,
+    title: 'AeroBrain.ai',
+    subtitle: 'Artificial Intelligence',
+    desc: 'The most advanced AI system for airlines. Deep learning analytics, predictive training insights, and intelligent scenario recommendations exclusively for AeroEBT.',
+    color: '#f59e0b'
+  }
 ]
 
 export default function AeroEBT() {
@@ -306,6 +331,54 @@ export default function AeroEBT() {
               <motion.div key={comp} className="competency-item" variants={fadeInUp}>
                 <span className="competency-number">{String(idx + 1).padStart(2, '0')}</span>
                 <span className="competency-name">{comp}</span>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Platform Integrations */}
+      <section className="platform-integrations section">
+        <div className="container">
+          <motion.div
+            className="section-header text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.span className="section-label" variants={fadeInUp}>
+              <Link2 size={16} style={{ display: 'inline', marginRight: '8px' }} />
+              Platform Integrations
+            </motion.span>
+            <motion.h2 variants={fadeInUp}>
+              Connected <span className="text-gradient">Aviation Ecosystem</span>
+            </motion.h2>
+            <motion.p variants={fadeInUp}>
+              AeroEBT integrates seamlessly with industry-leading aviation solutions, 
+              providing a unified platform for training, maintenance, and operations.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            className="platform-integrations-grid"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {platformIntegrations.map((integration, idx) => (
+              <motion.div key={idx} className="platform-integration-card" variants={fadeInUp}>
+                <div className="platform-integration-icon" style={{ background: `${integration.color}15`, color: integration.color }}>
+                  <integration.icon size={32} />
+                </div>
+                <span className="platform-integration-subtitle">{integration.subtitle}</span>
+                <h3>{integration.title}</h3>
+                <p>{integration.desc}</p>
+                <div className="platform-integration-badge" style={{ background: integration.color }}>
+                  <CheckCircle2 size={14} />
+                  Fully Integrated
+                </div>
               </motion.div>
             ))}
           </motion.div>
