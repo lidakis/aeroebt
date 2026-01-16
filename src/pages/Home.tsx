@@ -360,8 +360,9 @@ export default function Home() {
               Complete Training <span className="text-gradient">Ecosystem</span>
             </motion.h2>
             <motion.p variants={fadeInUp}>
-              Integrated solutions designed for airlines, ATOs, and training organizations 
-              requiring the highest standards of regulatory compliance.
+              All integrated into the same app: AeroEBT, LMS, TMS, and FSMS. Best user experience, 
+              simple in operation. Everything achieved in 3 taps maximum for instructors. Designed for 
+              airlines, ATOs, and training organizations requiring the highest standards of regulatory compliance.
             </motion.p>
           </motion.div>
 
