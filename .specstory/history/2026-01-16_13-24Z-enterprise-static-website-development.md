@@ -60670,14 +60670,21 @@ _**Agent (model default, mode Agent)**_
 ---
 
 
+Adding automatically generated reports for IOSA and other compliance systems to "What Sets Us Apart" and the features sections. Searching for those sections:
+
 
 ---
 
-<tool-use data-tool-type="unknown" data-tool-name="grep">
+<tool-use data-tool-type="search" data-tool-name="grep">
 <details>
-<summary>Tool use: **grep**</summary>
+<summary>Tool use: **grep** • Grep for "What Sets Us Apart|Unique Capabilities" in "/Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx" • 1 match</summary>
 
-Status: **loading**
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `src/pages/Home.tsx` | `<motion.span className="section-label" variants=\{fadeInUp\}>Unique Capabilities</motion.span>` | L268 |
 
 
 </details>
@@ -60691,13 +60698,20 @@ Status: **loading**
 
 
 
+
+
 ---
 
-<tool-use data-tool-type="unknown" data-tool-name="grep">
+<tool-use data-tool-type="search" data-tool-name="grep">
 <details>
-<summary>Tool use: **grep**</summary>
+<summary>Tool use: **grep** • Grep for "const uniqueFeatures" in "/Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx" • 1 match</summary>
 
-Status: **loading**
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `src/pages/Home.tsx` | `const uniqueFeatures = [` | L75 |
 
 
 </details>
@@ -60711,13 +60725,41 @@ Status: **loading**
 
 
 
+
+
 ---
 
-<tool-use data-tool-type="unknown" data-tool-name="read_file">
-<details>
-<summary>Tool use: **read_file**</summary>
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
 
-Status: **loading**
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+
+
+
+---
+
+<tool-use data-tool-type="search" data-tool-name="grep">
+<details>
+<summary>Tool use: **grep** • Grep for "mainFeatures|features.*=.*\[" in "/Users/lidakis/cursor_projects/NewAeroEBT website./src/pages" • 4 matches</summary>
+
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `src/pages/AeroEBT.tsx` | `const mainFeatures = [` | L20 |
+| `src/pages/AeroEBT.tsx` | `\{mainFeatures.map((feature) => (` | L220 |
+| `src/pages/FSMS.tsx` | `const features = [` | L19 |
+| `src/pages/AeroBrain.tsx` | `const features = [` | L19 |
 
 
 </details>
@@ -60731,14 +60773,12 @@ Status: **loading**
 
 
 
+
+
 ---
 
-<tool-use data-tool-type="unknown" data-tool-name="grep">
-<details>
-<summary>Tool use: **grep**</summary>
-
-Status: **loading**
-
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/AeroEBT.tsx</summary>
 
 </details>
 </tool-use>
@@ -60750,15 +60790,13 @@ Status: **loading**
 ---
 
 
+Adding the IOSA/compliance reports feature. Updating Home.tsx and AeroEBT.tsx:
+
 
 ---
 
-<tool-use data-tool-type="unknown" data-tool-name="read_file">
-<details>
-<summary>Tool use: **read_file**</summary>
-
-Status: **loading**
-
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
 
 </details>
 </tool-use>
@@ -60770,24 +60808,6 @@ Status: **loading**
 ---
 
 
-
----
-
-<tool-use data-tool-type="unknown" data-tool-name="read_file">
-<details>
-<summary>Tool use: **read_file**</summary>
-
-Status: **loading**
-
-
-</details>
-</tool-use>
-
----
-
-
-
----
 
 
 
@@ -60795,12 +60815,1143 @@ Status: **loading**
 
 <tool-use data-tool-type="write" data-tool-name="search_replace">
 
-<details><summary>Tool use: **search_replace**</summary>
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
 
-Status: **loading**
+**Chunk 1**
+Lines added: 5, lines removed: undefined
+
+```diff
+@@ -88,4 +88,9 @@
+      title: 'From Instructors, For Instructors', 
+      desc: 'Built by pilots and instructors with 16+ years of aviation training expertise. We understand your challenges because we\'ve lived them.' 
++   },
++   { 
++     icon: FileCheck, 
++     title: 'Automated Compliance Reports', 
++     desc: 'Automatically generated reports for IOSA, EASA, ICAO, and other compliance systems. All regulatory documentation ready at your fingertips without manual effort.' 
+    }
+  ]
+```
 
 </details>
 
+</tool-use>
+
+---
+
+
+
+---
+
+
+
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/AeroEBT.tsx</summary>
+
+**Chunk 1**
+Lines added: 2, lines removed: 2
+
+```diff
+@@ -41,6 +41,6 @@
+    {
+      icon: FileText,
+-     title: 'Regulatory Compliance',
+-     description: 'Automatic generation of all required CAA and EASA forms. Complete audit trails for regulatory inspections.'
++     title: 'Automated Compliance Reports',
++     description: 'Automatically generated reports for IOSA, EASA, ICAO, CAA, and other compliance systems. All regulatory documentation ready at your fingertips without manual effort.'
+    },
+    {
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Building and deploying:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy
+```
+
+```
+yarn run v1.22.22
+$ tsc -b &amp;&amp; vite build
+vite v6.4.1 building for production...
+transforming...
+✓ 1981 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.66 kB │ gzip:   0.78 kB
+dist/assets/index-CqYpfuG6.css   59.35 kB │ gzip:   8.69 kB
+dist/assets/index-JNCR2Qzc.js   420.38 kB │ gzip: 125.95 kB
+✓ built in 996ms
+Done in 2.76s.
+yarn run v1.22.22
+$ yarn build
+$ tsc -b &amp;&amp; vite build
+vite v6.4.1 building for production...
+transforming...
+✓ 1981 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.66 kB │ gzip:   0.78 kB
+dist/assets/index-CqYpfuG6.css   59.35 kB │ gzip:   8.69 kB
+dist/assets/index-JNCR2Qzc.js   420.38 kB │ gzip: 125.95 kB
+✓ built in 981ms
+$ gh-pages -d dist
+Published
+Done in 6.33s.
+
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && git add . && git commit -m "Add automated compliance reports feature (IOSA, EASA, ICAO) to unique features and main features" && git push origin main</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && git add . && git commit -m "Add automated compliance reports feature (IOSA, EASA, ICAO) to unique features and main features" && git push origin main
+```
+
+```
+[main ab19e46] Add automated compliance reports feature (IOSA, EASA, ICAO) to unique features and main features
+ 3 files changed, 1677 insertions(+), 2 deletions(-)
+To https://github.com/lidakis/aeroebt.git
+   59bb066..ab19e46  main -&gt; main
+
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+**Changes completed**
+
+Added automated compliance reports for IOSA and other compliance systems in two places:
+
+1. "What Sets Us Apart" section (Home page):
+   - Added: "Automated Compliance Reports"
+   - Description: "Automatically generated reports for IOSA, EASA, ICAO, and other compliance systems. All regulatory documentation ready at your fingertips without manual effort."
+
+2. Features section (AeroEBT page):
+   - Updated "Regulatory Compliance" to "Automated Compliance Reports"
+   - Description: "Automatically generated reports for IOSA, EASA, ICAO, CAA, and other compliance systems. All regulatory documentation ready at your fingertips without manual effort."
+
+**Changes deployed:**
+- Added to `uniqueFeatures` array in Home.tsx
+- Updated `mainFeatures` array in AeroEBT.tsx
+- Built and deployed to GitHub Pages
+- Committed and pushed to main branch
+
+The feature is live on the site. The "What Sets Us Apart" section now shows 4 unique features, including automated compliance reports for IOSA and other compliance systems.
+
+---
+
+_**User (2026-01-16 15:06Z)**_
+
+deploy
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Building and deploying the latest changes to GitHub Pages:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy
+```
+
+```
+yarn run v1.22.22
+$ tsc -b &amp;&amp; vite build
+vite v6.4.1 building for production...
+transforming...
+✓ 1981 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.66 kB │ gzip:   0.78 kB
+dist/assets/index-CqYpfuG6.css   59.35 kB │ gzip:   8.69 kB
+dist/assets/index-JNCR2Qzc.js   420.38 kB │ gzip: 125.95 kB
+✓ built in 981ms
+Done in 2.68s.
+yarn run v1.22.22
+$ yarn build
+$ tsc -b &amp;&amp; vite build
+vite v6.4.1 building for production...
+transforming...
+✓ 1981 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.66 kB │ gzip:   0.78 kB
+dist/assets/index-CqYpfuG6.css   59.35 kB │ gzip:   8.69 kB
+dist/assets/index-JNCR2Qzc.js   420.38 kB │ gzip: 125.95 kB
+✓ built in 960ms
+$ gh-pages -d dist
+Published
+Done in 5.01s.
+
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+
+
+
+---
+
+<tool-use data-tool-type="mcp" data-tool-name="mcp_cursor-browser-extension_browser_wait_for">
+<details>
+          <summary>Tool use: **mcp_cursor-browser-extension_browser_wait_for**</summary>
+      
+*Called tool*: cursor-browser-extension - browser_wait_for: Wait for text to appear or disappear or a specified time to pass
+
+*Parameters*:
+  * time: 10
+
+*Result*:
+Waited for 10
+
+Code:
+```javascript
+await new Promise(f => setTimeout(f, 10 * 1000));
+```
+
+
+### Page state
+- Page URL: http://aeroebt.skydynamics.aero/?v=3
+- Page Title: AeroEBT | Enterprise Aviation Training Platform - Evidence-Based Training
+- Page Snapshot:
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "AeroEBT" [ref=e6] [cursor=pointer]:
+        - /url: "#/"
+        - img [ref=e8]
+        - generic [ref=e10]: AeroEBT
+      - navigation [ref=e11]:
+        - button "Solutions" [ref=e13] [cursor=pointer]:
+          - text: Solutions
+          - img [ref=e14]
+        - link "Pricing" [ref=e16] [cursor=pointer]:
+          - /url: "#/plans"
+        - link "About" [ref=e17] [cursor=pointer]:
+          - /url: "#/about"
+        - link "FAQ" [ref=e18] [cursor=pointer]:
+          - /url: "#/faq"
+      - generic [ref=e19]:
+        - button "Switch to dark mode" [ref=e20] [cursor=pointer]:
+          - img [ref=e22]
+        - link "Request Demo" [ref=e24] [cursor=pointer]:
+          - /url: mailto:ebt@skydynamics.aero
+          - img [ref=e25]
+          - text: Request Demo
+  - main [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - generic [ref=e34]:
+              - img [ref=e35]
+              - text: EASA & ICAO Compliant
+            - generic [ref=e37]:
+              - img [ref=e38]
+              - text: ISO 27001 Certified
+          - heading "Enterprise Aviation Training Platform" [level=1] [ref=e41]:
+            - text: Enterprise Aviation
+            - text: Training Platform
+          - paragraph [ref=e42]:
+            - strong [ref=e43]: From instructors, for instructors.
+            - text: The only platform enabling
+            - strong [ref=e44]: Mixed to Full EBT implementation
+            - text: with the world's only Scenario Builder, powered by
+            - strong [ref=e45]: AeroBrain.ai
+            - text: – the most advanced AI system for airlines.
+          - generic [ref=e46]:
+            - link "Request Demo" [ref=e47] [cursor=pointer]:
+              - /url: mailto:ebt@skydynamics.aero?subject=AeroEBT Demo Request
+              - img [ref=e48]
+              - text: Request Demo
+            - link "Explore AeroEBT" [ref=e51] [cursor=pointer]:
+              - /url: "#/aeroebt"
+              - text: Explore AeroEBT
+              - img [ref=e52]
+          - generic [ref=e54]:
+            - generic [ref=e55]: "Regulatory-compliant training methodologies:"
+            - generic [ref=e56]:
+              - generic [ref=e57]: EBT
+              - generic [ref=e58]: CBTA
+              - generic [ref=e59]: AQP
+              - generic [ref=e60]: MPL
+              - generic [ref=e61]: Type Rating
+              - generic [ref=e62]: Recurrent
+              - generic [ref=e63]: Line Training
+              - generic [ref=e64]: Ab Initio
+        - generic [ref=e66]:
+          - img "AeroEBT Scenario Builder Dashboard" [ref=e68]
+          - img "EBT Instructor on iPad" [ref=e70]
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: 16+
+          - text: Years of Aviation Excellence
+        - generic [ref=e76]:
+          - generic [ref=e77]: 100%
+          - text: Regulatory Compliance
+        - generic [ref=e78]:
+          - generic [ref=e79]: 99.9%
+          - text: System Availability
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]: Unique Capabilities
+          - heading "What Sets Us Apart" [level=2] [ref=e84]
+          - paragraph [ref=e85]: AeroEBT is the only aviation training platform that combines the world's only Scenario Builder with advanced AI-powered analytics.
+        - generic [ref=e86]:
+          - generic [ref=e87]:
+            - img [ref=e89]
+            - heading "Powered by AeroBrain.ai" [level=3] [ref=e92]
+            - paragraph [ref=e93]: The most advanced AI system for airlines. AeroBrain.ai integrates seamlessly with AeroEBT, providing predictive analytics and training optimization that no other platform can match.
+          - generic [ref=e94]:
+            - img [ref=e96]
+            - heading "Mixed to Full EBT Implementation" [level=3] [ref=e98]
+            - paragraph [ref=e99]: The world's only Scenario Builder enables smooth transition from Mixed to Full EBT. Create EASA/ICAO compliant training scenarios with one intuitive tool.
+          - generic [ref=e100]:
+            - img [ref=e102]
+            - heading "From Instructors, For Instructors" [level=3] [ref=e105]
+            - paragraph [ref=e106]: Built by pilots and instructors with 16+ years of aviation training expertise. We understand your challenges because we've lived them.
+      - generic [ref=e108]:
+        - generic [ref=e109]:
+          - generic [ref=e110]:
+            - img [ref=e111]
+            - text: Seamless Integrations
+          - heading "Connected Ecosystem" [level=2] [ref=e114]
+          - paragraph [ref=e115]: AeroEBT integrates with industry-leading aviation solutions to provide a complete, unified platform for all your operational needs.
+        - generic [ref=e116]:
+          - generic [ref=e117]:
+            - img [ref=e119]
+            - generic [ref=e121]:
+              - generic [ref=e122]: Aircraft Maintenance
+              - heading "FleetSnap Integration" [level=3] [ref=e123]
+              - paragraph [ref=e124]: Seamlessly integrated with FleetSnap for comprehensive aircraft maintenance tracking. Connect training data with maintenance schedules, ensuring crew competency aligns with fleet readiness.
+            - generic [ref=e125]:
+              - img [ref=e126]
+              - text: Fully Integrated
+          - generic [ref=e129]:
+            - img [ref=e131]
+            - generic [ref=e133]:
+              - generic [ref=e134]: Electronic Flight Bag
+              - heading "AeroEFB Integration" [level=3] [ref=e135]
+              - paragraph [ref=e136]: Full integration with AeroEFB for a complete cockpit solution. Synchronize training records, qualifications, and operational data directly with your Electronic Flight Bag system.
+            - generic [ref=e137]:
+              - img [ref=e138]
+              - text: Fully Integrated
+          - generic [ref=e141]:
+            - img [ref=e143]
+            - generic [ref=e153]:
+              - generic [ref=e154]: Artificial Intelligence
+              - heading "AeroBrain.ai Integration" [level=3] [ref=e155]
+              - paragraph [ref=e156]: The most advanced AI system for airlines, deeply integrated with AeroEBT. Leverage machine learning for predictive training analytics and intelligent scenario recommendations.
+            - generic [ref=e157]:
+              - img [ref=e158]
+              - text: Fully Integrated
+          - generic [ref=e161]:
+            - img [ref=e163]
+            - generic [ref=e166]:
+              - generic [ref=e167]: Crew Management
+              - heading "WebAIMS Integration" [level=3] [ref=e168]
+              - paragraph [ref=e169]: Full integration with WebAIMS for seamless crew management and scheduling. Synchronize training records with crew rostering and qualification tracking.
+            - generic [ref=e170]:
+              - img [ref=e171]
+              - text: Fully Integrated
+          - generic [ref=e174]:
+            - img [ref=e176]
+            - generic [ref=e181]:
+              - generic [ref=e182]: Crew Collaboration
+              - heading "Wingman Application" [level=3] [ref=e183]
+              - paragraph [ref=e184]: Connect with Wingman for enhanced crew collaboration and communication. Share training insights and coordinate competency development across your team.
+            - generic [ref=e185]:
+              - img [ref=e186]
+              - text: Fully Integrated
+          - generic [ref=e189]:
+            - img [ref=e191]
+            - generic [ref=e193]:
+              - generic [ref=e194]: Enterprise Productivity
+              - heading "Microsoft 365" [level=3] [ref=e195]
+              - paragraph [ref=e196]: Native integration with Microsoft 365 suite including Teams, SharePoint, and Azure AD. Single sign-on, document management, and seamless collaboration.
+            - generic [ref=e197]:
+              - img [ref=e198]
+              - text: Fully Integrated
+          - generic [ref=e201]:
+            - img [ref=e203]
+            - generic [ref=e206]:
+              - generic [ref=e207]: Cloud Collaboration
+              - heading "Google Workspace" [level=3] [ref=e208]
+              - paragraph [ref=e209]: Full integration with Google Workspace for calendar sync, document sharing, and SSO authentication. Streamline workflows with Gmail and Drive connectivity.
+            - generic [ref=e210]:
+              - img [ref=e211]
+              - text: Fully Integrated
+          - generic [ref=e214]:
+            - img [ref=e216]
+            - generic [ref=e219]:
+              - generic [ref=e220]: SMS Integration
+              - heading "Safety Management Systems" [level=3] [ref=e221]
+              - paragraph [ref=e222]: Connect with leading SMS platforms for comprehensive safety data integration. Link training outcomes with safety reports and risk assessments.
+            - generic [ref=e223]:
+              - img [ref=e224]
+              - text: Fully Integrated
+      - generic [ref=e228]:
+        - generic [ref=e229]:
+          - generic [ref=e230]: Our Solutions
+          - heading "Complete Training Ecosystem" [level=2] [ref=e231]
+          - paragraph [ref=e232]: Integrated solutions designed for airlines, ATOs, and training organizations requiring the highest standards of regulatory compliance.
+        - generic [ref=e233]:
+          - link "AeroEBT Evidence-Based Training From instructors, for instructors. The only complete EBT solution for Mixed to Full EBT implementation with an intuitive interface. World's Only Scenario Builder EBT Instructor Mixed to Full EBT EASA/ICAO Compliant" [ref=e235] [cursor=pointer]:
+            - /url: "#/aeroebt"
+            - img [ref=e237]
+            - generic [ref=e240]:
+              - heading "AeroEBT" [level=3] [ref=e241]
+              - generic [ref=e242]: Evidence-Based Training
+              - paragraph [ref=e243]: From instructors, for instructors. The only complete EBT solution for Mixed to Full EBT implementation with an intuitive interface.
+              - list [ref=e244]:
+                - listitem [ref=e245]:
+                  - img [ref=e246]
+                  - text: World's Only Scenario Builder
+                - listitem [ref=e249]:
+                  - img [ref=e250]
+                  - text: EBT Instructor
+                - listitem [ref=e253]:
+                  - img [ref=e254]
+                  - text: Mixed to Full EBT
+                - listitem [ref=e257]:
+                  - img [ref=e258]
+                  - text: EASA/ICAO Compliant
+            - img [ref=e261]
+          - link "AeroBrain The Most Advanced AI for Aviation The most advanced AI system for airlines. Deep learning analytics integrated with AeroEBT for unprecedented training insights. AeroEBT Integration Predictive Analytics Deep Learning Training Optimization" [ref=e264] [cursor=pointer]:
+            - /url: "#/aerobrain"
+            - img [ref=e266]
+            - generic [ref=e276]:
+              - heading "AeroBrain" [level=3] [ref=e277]
+              - generic [ref=e278]: The Most Advanced AI for Aviation
+              - paragraph [ref=e279]: The most advanced AI system for airlines. Deep learning analytics integrated with AeroEBT for unprecedented training insights.
+              - list [ref=e280]:
+                - listitem [ref=e281]:
+                  - img [ref=e282]
+                  - text: AeroEBT Integration
+                - listitem [ref=e285]:
+                  - img [ref=e286]
+                  - text: Predictive Analytics
+                - listitem [ref=e289]:
+                  - img [ref=e290]
+                  - text: Deep Learning
+                - listitem [ref=e293]:
+                  - img [ref=e294]
+                  - text: Training Optimization
+            - img [ref=e297]
+          - link "TMS Training Management Complete training lifecycle management with LMS integration and regulatory compliance tracking. LMS Integration Qualification Tracking Compliance Reports Document Management" [ref=e300] [cursor=pointer]:
+            - /url: "#/tms"
+            - img [ref=e302]
+            - generic [ref=e306]:
+              - heading "TMS" [level=3] [ref=e307]
+              - generic [ref=e308]: Training Management
+              - paragraph [ref=e309]: Complete training lifecycle management with LMS integration and regulatory compliance tracking.
+              - list [ref=e310]:
+                - listitem [ref=e311]:
+                  - img [ref=e312]
+                  - text: LMS Integration
+                - listitem [ref=e315]:
+                  - img [ref=e316]
+                  - text: Qualification Tracking
+                - listitem [ref=e319]:
+                  - img [ref=e320]
+                  - text: Compliance Reports
+                - listitem [ref=e323]:
+                  - img [ref=e324]
+                  - text: Document Management
+            - img [ref=e327]
+          - link "FSMS Flight School Management End-to-end solution for ATOs and flight schools with scheduling, fleet management, and student tracking. Resource Scheduling Fleet Management Student Profiles Financial Tracking" [ref=e330] [cursor=pointer]:
+            - /url: "#/fsms"
+            - img [ref=e332]
+            - generic [ref=e334]:
+              - heading "FSMS" [level=3] [ref=e335]
+              - generic [ref=e336]: Flight School Management
+              - paragraph [ref=e337]: End-to-end solution for ATOs and flight schools with scheduling, fleet management, and student tracking.
+              - list [ref=e338]:
+                - listitem [ref=e339]:
+                  - img [ref=e340]
+                  - text: Resource Scheduling
+                - listitem [ref=e343]:
+                  - img [ref=e344]
+                  - text: Fleet Management
+                - listitem [ref=e347]:
+                  - img [ref=e348]
+                  - text: Student Profiles
+                - listitem [ref=e351]:
+                  - img [ref=e352]
+                  - text: Financial Tracking
+            - img [ref=e355]
+      - generic [ref=e359]:
+        - generic [ref=e360]:
+          - generic [ref=e361]: Compliance & Security
+          - heading "Built for Regulatory Excellence" [level=2] [ref=e362]
+          - paragraph [ref=e363]: Our platform is designed from the ground up to meet the strictest aviation regulatory requirements and data security standards. Every feature is developed with compliance in mind.
+          - generic [ref=e364]:
+            - generic [ref=e365]:
+              - img [ref=e367]
+              - generic [ref=e369]:
+                - heading "EASA Compliant" [level=4] [ref=e370]
+                - paragraph [ref=e371]: Full compliance with European Aviation Safety Agency standards for EBT and CBTA training
+            - generic [ref=e372]:
+              - img [ref=e374]
+              - generic [ref=e378]:
+                - heading "ICAO Standards" [level=4] [ref=e379]
+                - paragraph [ref=e380]: Aligned with International Civil Aviation Organization competency frameworks
+            - generic [ref=e381]:
+              - img [ref=e383]
+              - generic [ref=e386]:
+                - heading "ISO 27001 Certified" [level=4] [ref=e387]
+                - paragraph [ref=e388]: Enterprise-grade data security with certified information security management
+            - generic [ref=e389]:
+              - img [ref=e391]
+              - generic [ref=e394]:
+                - heading "GDPR Compliant" [level=4] [ref=e395]
+                - paragraph [ref=e396]: Full compliance with European data protection regulations
+        - img "AeroEBT Compliance Dashboard" [ref=e398]
+      - generic [ref=e401]:
+        - generic [ref=e402]:
+          - heading "Ready to Transform Your Training?" [level=2] [ref=e403]
+          - paragraph [ref=e404]: Join leading airlines and training organizations using AeroEBT for regulatory-compliant, evidence-based training management.
+        - generic [ref=e405]:
+          - link "Schedule a Demo" [ref=e406] [cursor=pointer]:
+            - /url: mailto:ebt@skydynamics.aero?subject=AeroEBT Demo Request
+            - img [ref=e407]
+            - text: Schedule a Demo
+          - link "Contact Sales" [ref=e410] [cursor=pointer]:
+            - /url: mailto:info@skydynamics.aero?subject=AeroEBT Inquiry
+  - contentinfo [ref=e411]:
+    - generic [ref=e412]:
+      - generic [ref=e413]:
+        - generic [ref=e414]:
+          - link "AeroEBT" [ref=e415] [cursor=pointer]:
+            - /url: "#/"
+            - img [ref=e417]
+            - generic [ref=e419]: AeroEBT
+          - paragraph [ref=e420]: Enterprise aviation training platform. Evidence-based training, AI-powered analytics, and complete regulatory compliance for airlines and training organizations worldwide.
+          - generic [ref=e421]:
+            - generic [ref=e422]:
+              - img [ref=e423]
+              - generic [ref=e425]: ISO 27001
+            - generic [ref=e426]:
+              - img [ref=e427]
+              - generic [ref=e430]: EASA Certified
+        - generic [ref=e431]:
+          - heading "Solutions" [level=4] [ref=e432]
+          - list [ref=e433]:
+            - listitem [ref=e434]:
+              - link "AeroEBT" [ref=e435] [cursor=pointer]:
+                - /url: "#/aeroebt"
+            - listitem [ref=e436]:
+              - link "AeroBrain" [ref=e437] [cursor=pointer]:
+                - /url: "#/aerobrain"
+            - listitem [ref=e438]:
+              - link "TMS" [ref=e439] [cursor=pointer]:
+                - /url: "#/tms"
+            - listitem [ref=e440]:
+              - link "FSMS" [ref=e441] [cursor=pointer]:
+                - /url: "#/fsms"
+        - generic [ref=e442]:
+          - heading "Company" [level=4] [ref=e443]
+          - list [ref=e444]:
+            - listitem [ref=e445]:
+              - link "About Us" [ref=e446] [cursor=pointer]:
+                - /url: "#/about"
+            - listitem [ref=e447]:
+              - link "Pricing" [ref=e448] [cursor=pointer]:
+                - /url: "#/plans"
+            - listitem [ref=e449]:
+              - link "FAQ" [ref=e450] [cursor=pointer]:
+                - /url: "#/faq"
+        - generic [ref=e451]:
+          - heading "Compliance" [level=4] [ref=e452]
+          - list [ref=e453]:
+            - listitem [ref=e454]:
+              - link "EASA Compliance" [ref=e455] [cursor=pointer]:
+                - /url: "#/aeroebt"
+            - listitem [ref=e456]:
+              - link "ICAO Standards" [ref=e457] [cursor=pointer]:
+                - /url: "#/aeroebt"
+            - listitem [ref=e458]:
+              - link "Data Security" [ref=e459] [cursor=pointer]:
+                - /url: "#/about"
+        - generic [ref=e460]:
+          - heading "Contact" [level=4] [ref=e461]
+          - list [ref=e462]:
+            - listitem [ref=e463]:
+              - img [ref=e464]
+              - link "info@skydynamics.aero" [ref=e467] [cursor=pointer]:
+                - /url: mailto:info@skydynamics.aero
+            - listitem [ref=e468]:
+              - img [ref=e469]
+              - link "ebt@skydynamics.aero" [ref=e472] [cursor=pointer]:
+                - /url: mailto:ebt@skydynamics.aero
+            - listitem [ref=e473]:
+              - img [ref=e474]
+              - generic [ref=e476]: +30 2813 015 538
+            - listitem [ref=e477]:
+              - img [ref=e478]
+              - generic [ref=e481]:
+                - text: Science & Technology Park of Crete
+                - text: Heraklion, Greece
+      - generic [ref=e482]:
+        - generic [ref=e484]: © 2026 SkyDynamics G.P. All rights reserved.
+        - link [ref=e486] [cursor=pointer]:
+          - /url: https://linkedin.com/company/sky-dynamics
+          - img [ref=e487]
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+
+
+
+---
+
+<tool-use data-tool-type="mcp" data-tool-name="mcp_cursor-browser-extension_browser_navigate">
+<details>
+          <summary>Tool use: **mcp_cursor-browser-extension_browser_navigate**</summary>
+      
+*Called tool*: cursor-browser-extension - browser_navigate: Navigate to a URL
+
+*Parameters*:
+  * url: http://aeroebt.skydynamics.aero/?deploy=latest
+
+*Result*:
+
+
+### Page state
+- Page URL: http://aeroebt.skydynamics.aero/?deploy=latest
+- Page Title: AeroEBT | Enterprise Aviation Training Platform - Evidence-Based Training
+- Page Snapshot:
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "AeroEBT" [ref=e6] [cursor=pointer]:
+        - /url: "#/"
+        - img [ref=e8]
+        - generic [ref=e10]: AeroEBT
+      - navigation [ref=e11]:
+        - button "Solutions" [ref=e13] [cursor=pointer]:
+          - text: Solutions
+          - img [ref=e14]
+        - link "Pricing" [ref=e16] [cursor=pointer]:
+          - /url: "#/plans"
+        - link "About" [ref=e17] [cursor=pointer]:
+          - /url: "#/about"
+        - link "FAQ" [ref=e18] [cursor=pointer]:
+          - /url: "#/faq"
+      - generic [ref=e19]:
+        - button "Switch to dark mode" [ref=e20] [cursor=pointer]:
+          - img [ref=e22]
+        - link "Request Demo" [ref=e24] [cursor=pointer]:
+          - /url: mailto:ebt@skydynamics.aero
+          - img [ref=e25]
+          - text: Request Demo
+  - main [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - generic [ref=e34]:
+              - img [ref=e35]
+              - text: EASA & ICAO Compliant
+            - generic [ref=e37]:
+              - img [ref=e38]
+              - text: ISO 27001 Certified
+          - heading "Enterprise Aviation Training Platform" [level=1] [ref=e41]:
+            - text: Enterprise Aviation
+            - text: Training Platform
+          - paragraph [ref=e42]:
+            - strong [ref=e43]: From instructors, for instructors.
+            - text: The only platform enabling
+            - strong [ref=e44]: Mixed to Full EBT implementation
+            - text: with the world's only Scenario Builder, powered by
+            - strong [ref=e45]: AeroBrain.ai
+            - text: – the most advanced AI system for airlines.
+          - generic [ref=e46]:
+            - link "Request Demo" [ref=e47] [cursor=pointer]:
+              - /url: mailto:ebt@skydynamics.aero?subject=AeroEBT Demo Request
+              - img [ref=e48]
+              - text: Request Demo
+            - link "Explore AeroEBT" [ref=e51] [cursor=pointer]:
+              - /url: "#/aeroebt"
+              - text: Explore AeroEBT
+              - img [ref=e52]
+          - generic [ref=e54]:
+            - generic [ref=e55]: "Regulatory-compliant training methodologies:"
+            - generic [ref=e56]:
+              - generic [ref=e57]: EBT
+              - generic [ref=e58]: CBTA
+              - generic [ref=e59]: AQP
+              - generic [ref=e60]: MPL
+              - generic [ref=e61]: Type Rating
+              - generic [ref=e62]: Recurrent
+              - generic [ref=e63]: Line Training
+              - generic [ref=e64]: Ab Initio
+        - generic [ref=e66]:
+          - img "AeroEBT Scenario Builder Dashboard" [ref=e68]
+          - img "EBT Instructor on iPad" [ref=e70]
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e75]: 16+
+          - text: Years of Aviation Excellence
+        - generic [ref=e76]:
+          - generic [ref=e77]: 100%
+          - text: Regulatory Compliance
+        - generic [ref=e78]:
+          - generic [ref=e79]: 99.9%
+          - text: System Availability
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]: Unique Capabilities
+          - heading "What Sets Us Apart" [level=2] [ref=e84]
+          - paragraph [ref=e85]: AeroEBT is the only aviation training platform that combines the world's only Scenario Builder with advanced AI-powered analytics.
+        - generic [ref=e86]:
+          - generic [ref=e87]:
+            - img [ref=e89]
+            - heading "Powered by AeroBrain.ai" [level=3] [ref=e92]
+            - paragraph [ref=e93]: The most advanced AI system for airlines. AeroBrain.ai integrates seamlessly with AeroEBT, providing predictive analytics and training optimization that no other platform can match.
+          - generic [ref=e94]:
+            - img [ref=e96]
+            - heading "Mixed to Full EBT Implementation" [level=3] [ref=e98]
+            - paragraph [ref=e99]: The world's only Scenario Builder enables smooth transition from Mixed to Full EBT. Create EASA/ICAO compliant training scenarios with one intuitive tool.
+          - generic [ref=e100]:
+            - img [ref=e102]
+            - heading "From Instructors, For Instructors" [level=3] [ref=e105]
+            - paragraph [ref=e106]: Built by pilots and instructors with 16+ years of aviation training expertise. We understand your challenges because we've lived them.
+          - generic [ref=e107]:
+            - img [ref=e109]
+            - heading "Automated Compliance Reports" [level=3] [ref=e113]
+            - paragraph [ref=e114]: Automatically generated reports for IOSA, EASA, ICAO, and other compliance systems. All regulatory documentation ready at your fingertips without manual effort.
+      - generic [ref=e116]:
+        - generic [ref=e117]:
+          - generic [ref=e118]:
+            - img [ref=e119]
+            - text: Seamless Integrations
+          - heading "Connected Ecosystem" [level=2] [ref=e122]
+          - paragraph [ref=e123]: AeroEBT integrates with industry-leading aviation solutions to provide a complete, unified platform for all your operational needs.
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - img [ref=e127]
+            - generic [ref=e129]:
+              - generic [ref=e130]: Aircraft Maintenance
+              - heading "FleetSnap Integration" [level=3] [ref=e131]
+              - paragraph [ref=e132]: Seamlessly integrated with FleetSnap for comprehensive aircraft maintenance tracking. Connect training data with maintenance schedules, ensuring crew competency aligns with fleet readiness.
+            - generic [ref=e133]:
+              - img [ref=e134]
+              - text: Fully Integrated
+          - generic [ref=e137]:
+            - img [ref=e139]
+            - generic [ref=e141]:
+              - generic [ref=e142]: Electronic Flight Bag
+              - heading "AeroEFB Integration" [level=3] [ref=e143]
+              - paragraph [ref=e144]: Full integration with AeroEFB for a complete cockpit solution. Synchronize training records, qualifications, and operational data directly with your Electronic Flight Bag system.
+            - generic [ref=e145]:
+              - img [ref=e146]
+              - text: Fully Integrated
+          - generic [ref=e149]:
+            - img [ref=e151]
+            - generic [ref=e161]:
+              - generic [ref=e162]: Artificial Intelligence
+              - heading "AeroBrain.ai Integration" [level=3] [ref=e163]
+              - paragraph [ref=e164]: The most advanced AI system for airlines, deeply integrated with AeroEBT. Leverage machine learning for predictive training analytics and intelligent scenario recommendations.
+            - generic [ref=e165]:
+              - img [ref=e166]
+              - text: Fully Integrated
+          - generic [ref=e169]:
+            - img [ref=e171]
+            - generic [ref=e174]:
+              - generic [ref=e175]: Crew Management
+              - heading "WebAIMS Integration" [level=3] [ref=e176]
+              - paragraph [ref=e177]: Full integration with WebAIMS for seamless crew management and scheduling. Synchronize training records with crew rostering and qualification tracking.
+            - generic [ref=e178]:
+              - img [ref=e179]
+              - text: Fully Integrated
+          - generic [ref=e182]:
+            - img [ref=e184]
+            - generic [ref=e189]:
+              - generic [ref=e190]: Crew Collaboration
+              - heading "Wingman Application" [level=3] [ref=e191]
+              - paragraph [ref=e192]: Connect with Wingman for enhanced crew collaboration and communication. Share training insights and coordinate competency development across your team.
+            - generic [ref=e193]:
+              - img [ref=e194]
+              - text: Fully Integrated
+          - generic [ref=e197]:
+            - img [ref=e199]
+            - generic [ref=e201]:
+              - generic [ref=e202]: Enterprise Productivity
+              - heading "Microsoft 365" [level=3] [ref=e203]
+              - paragraph [ref=e204]: Native integration with Microsoft 365 suite including Teams, SharePoint, and Azure AD. Single sign-on, document management, and seamless collaboration.
+            - generic [ref=e205]:
+              - img [ref=e206]
+              - text: Fully Integrated
+          - generic [ref=e209]:
+            - img [ref=e211]
+            - generic [ref=e214]:
+              - generic [ref=e215]: Cloud Collaboration
+              - heading "Google Workspace" [level=3] [ref=e216]
+              - paragraph [ref=e217]: Full integration with Google Workspace for calendar sync, document sharing, and SSO authentication. Streamline workflows with Gmail and Drive connectivity.
+            - generic [ref=e218]:
+              - img [ref=e219]
+              - text: Fully Integrated
+          - generic [ref=e222]:
+            - img [ref=e224]
+            - generic [ref=e227]:
+              - generic [ref=e228]: SMS Integration
+              - heading "Safety Management Systems" [level=3] [ref=e229]
+              - paragraph [ref=e230]: Connect with leading SMS platforms for comprehensive safety data integration. Link training outcomes with safety reports and risk assessments.
+            - generic [ref=e231]:
+              - img [ref=e232]
+              - text: Fully Integrated
+      - generic [ref=e236]:
+        - generic [ref=e237]:
+          - generic [ref=e238]: Our Solutions
+          - heading "Complete Training Ecosystem" [level=2] [ref=e239]
+          - paragraph [ref=e240]: "All integrated into the same app: AeroEBT, LMS, TMS, and FSMS. Best user experience, simple in operation. Everything achieved in 3 taps maximum for instructors. Designed for airlines, ATOs, and training organizations requiring the highest standards of regulatory compliance."
+        - generic [ref=e241]:
+          - link "AeroEBT Evidence-Based Training From instructors, for instructors. The only complete EBT solution for Mixed to Full EBT implementation with an intuitive interface. World's Only Scenario Builder EBT Instructor Mixed to Full EBT EASA/ICAO Compliant" [ref=e243] [cursor=pointer]:
+            - /url: "#/aeroebt"
+            - img [ref=e245]
+            - generic [ref=e248]:
+              - heading "AeroEBT" [level=3] [ref=e249]
+              - generic [ref=e250]: Evidence-Based Training
+              - paragraph [ref=e251]: From instructors, for instructors. The only complete EBT solution for Mixed to Full EBT implementation with an intuitive interface.
+              - list [ref=e252]:
+                - listitem [ref=e253]:
+                  - img [ref=e254]
+                  - text: World's Only Scenario Builder
+                - listitem [ref=e257]:
+                  - img [ref=e258]
+                  - text: EBT Instructor
+                - listitem [ref=e261]:
+                  - img [ref=e262]
+                  - text: Mixed to Full EBT
+                - listitem [ref=e265]:
+                  - img [ref=e266]
+                  - text: EASA/ICAO Compliant
+            - img [ref=e269]
+          - link "AeroBrain The Most Advanced AI for Aviation The most advanced AI system for airlines. Deep learning analytics integrated with AeroEBT for unprecedented training insights. AeroEBT Integration Predictive Analytics Deep Learning Training Optimization" [ref=e272] [cursor=pointer]:
+            - /url: "#/aerobrain"
+            - img [ref=e274]
+            - generic [ref=e284]:
+              - heading "AeroBrain" [level=3] [ref=e285]
+              - generic [ref=e286]: The Most Advanced AI for Aviation
+              - paragraph [ref=e287]: The most advanced AI system for airlines. Deep learning analytics integrated with AeroEBT for unprecedented training insights.
+              - list [ref=e288]:
+                - listitem [ref=e289]:
+                  - img [ref=e290]
+                  - text: AeroEBT Integration
+                - listitem [ref=e293]:
+                  - img [ref=e294]
+                  - text: Predictive Analytics
+                - listitem [ref=e297]:
+                  - img [ref=e298]
+                  - text: Deep Learning
+                - listitem [ref=e301]:
+                  - img [ref=e302]
+                  - text: Training Optimization
+            - img [ref=e305]
+          - link "TMS Training Management Complete training lifecycle management with LMS integration and regulatory compliance tracking. LMS Integration Qualification Tracking Compliance Reports Document Management" [ref=e308] [cursor=pointer]:
+            - /url: "#/tms"
+            - img [ref=e310]
+            - generic [ref=e314]:
+              - heading "TMS" [level=3] [ref=e315]
+              - generic [ref=e316]: Training Management
+              - paragraph [ref=e317]: Complete training lifecycle management with LMS integration and regulatory compliance tracking.
+              - list [ref=e318]:
+                - listitem [ref=e319]:
+                  - img [ref=e320]
+                  - text: LMS Integration
+                - listitem [ref=e323]:
+                  - img [ref=e324]
+                  - text: Qualification Tracking
+                - listitem [ref=e327]:
+                  - img [ref=e328]
+                  - text: Compliance Reports
+                - listitem [ref=e331]:
+                  - img [ref=e332]
+                  - text: Document Management
+            - img [ref=e335]
+          - link "FSMS Flight School Management End-to-end solution for ATOs and flight schools with scheduling, fleet management, and student tracking. Resource Scheduling Fleet Management Student Profiles Financial Tracking" [ref=e338] [cursor=pointer]:
+            - /url: "#/fsms"
+            - img [ref=e340]
+            - generic [ref=e342]:
+              - heading "FSMS" [level=3] [ref=e343]
+              - generic [ref=e344]: Flight School Management
+              - paragraph [ref=e345]: End-to-end solution for ATOs and flight schools with scheduling, fleet management, and student tracking.
+              - list [ref=e346]:
+                - listitem [ref=e347]:
+                  - img [ref=e348]
+                  - text: Resource Scheduling
+                - listitem [ref=e351]:
+                  - img [ref=e352]
+                  - text: Fleet Management
+                - listitem [ref=e355]:
+                  - img [ref=e356]
+                  - text: Student Profiles
+                - listitem [ref=e359]:
+                  - img [ref=e360]
+                  - text: Financial Tracking
+            - img [ref=e363]
+      - generic [ref=e367]:
+        - generic [ref=e368]:
+          - generic [ref=e369]: Compliance & Security
+          - heading "Built for Regulatory Excellence" [level=2] [ref=e370]
+          - paragraph [ref=e371]: Our platform is designed from the ground up to meet the strictest aviation regulatory requirements and data security standards. Every feature is developed with compliance in mind.
+          - generic [ref=e372]:
+            - generic [ref=e373]:
+              - img [ref=e375]
+              - generic [ref=e377]:
+                - heading "EASA Compliant" [level=4] [ref=e378]
+                - paragraph [ref=e379]: Full compliance with European Aviation Safety Agency standards for EBT and CBTA training
+            - generic [ref=e380]:
+              - img [ref=e382]
+              - generic [ref=e386]:
+                - heading "ICAO Standards" [level=4] [ref=e387]
+                - paragraph [ref=e388]: Aligned with International Civil Aviation Organization competency frameworks
+            - generic [ref=e389]:
+              - img [ref=e391]
+              - generic [ref=e394]:
+                - heading "ISO 27001 Certified" [level=4] [ref=e395]
+                - paragraph [ref=e396]: Enterprise-grade data security with certified information security management
+            - generic [ref=e397]:
+              - img [ref=e399]
+              - generic [ref=e402]:
+                - heading "GDPR Compliant" [level=4] [ref=e403]
+                - paragraph [ref=e404]: Full compliance with European data protection regulations
+        - img "AeroEBT Compliance Dashboard" [ref=e406]
+      - generic [ref=e409]:
+        - generic [ref=e410]:
+          - heading "Ready to Transform Your Training?" [level=2] [ref=e411]
+          - paragraph [ref=e412]: Join leading airlines and training organizations using AeroEBT for regulatory-compliant, evidence-based training management.
+        - generic [ref=e413]:
+          - link "Schedule a Demo" [ref=e414] [cursor=pointer]:
+            - /url: mailto:ebt@skydynamics.aero?subject=AeroEBT Demo Request
+            - img [ref=e415]
+            - text: Schedule a Demo
+          - link "Contact Sales" [ref=e418] [cursor=pointer]:
+            - /url: mailto:info@skydynamics.aero?subject=AeroEBT Inquiry
+  - contentinfo [ref=e419]:
+    - generic [ref=e420]:
+      - generic [ref=e421]:
+        - generic [ref=e422]:
+          - link "AeroEBT" [ref=e423] [cursor=pointer]:
+            - /url: "#/"
+            - img [ref=e425]
+            - generic [ref=e427]: AeroEBT
+          - paragraph [ref=e428]: Enterprise aviation training platform. Evidence-based training, AI-powered analytics, and complete regulatory compliance for airlines and training organizations worldwide.
+          - generic [ref=e429]:
+            - generic [ref=e430]:
+              - img [ref=e431]
+              - generic [ref=e433]: ISO 27001
+            - generic [ref=e434]:
+              - img [ref=e435]
+              - generic [ref=e438]: EASA Certified
+        - generic [ref=e439]:
+          - heading "Solutions" [level=4] [ref=e440]
+          - list [ref=e441]:
+            - listitem [ref=e442]:
+              - link "AeroEBT" [ref=e443] [cursor=pointer]:
+                - /url: "#/aeroebt"
+            - listitem [ref=e444]:
+              - link "AeroBrain" [ref=e445] [cursor=pointer]:
+                - /url: "#/aerobrain"
+            - listitem [ref=e446]:
+              - link "TMS" [ref=e447] [cursor=pointer]:
+                - /url: "#/tms"
+            - listitem [ref=e448]:
+              - link "FSMS" [ref=e449] [cursor=pointer]:
+                - /url: "#/fsms"
+        - generic [ref=e450]:
+          - heading "Company" [level=4] [ref=e451]
+          - list [ref=e452]:
+            - listitem [ref=e453]:
+              - link "About Us" [ref=e454] [cursor=pointer]:
+                - /url: "#/about"
+            - listitem [ref=e455]:
+              - link "Pricing" [ref=e456] [cursor=pointer]:
+                - /url: "#/plans"
+            - listitem [ref=e457]:
+              - link "FAQ" [ref=e458] [cursor=pointer]:
+                - /url: "#/faq"
+        - generic [ref=e459]:
+          - heading "Compliance" [level=4] [ref=e460]
+          - list [ref=e461]:
+            - listitem [ref=e462]:
+              - link "EASA Compliance" [ref=e463] [cursor=pointer]:
+                - /url: "#/aeroebt"
+            - listitem [ref=e464]:
+              - link "ICAO Standards" [ref=e465] [cursor=pointer]:
+                - /url: "#/aeroebt"
+            - listitem [ref=e466]:
+              - link "Data Security" [ref=e467] [cursor=pointer]:
+                - /url: "#/about"
+        - generic [ref=e468]:
+          - heading "Contact" [level=4] [ref=e469]
+          - list [ref=e470]:
+            - listitem [ref=e471]:
+              - img [ref=e472]
+              - link "info@skydynamics.aero" [ref=e475] [cursor=pointer]:
+                - /url: mailto:info@skydynamics.aero
+            - listitem [ref=e476]:
+              - img [ref=e477]
+              - link "ebt@skydynamics.aero" [ref=e480] [cursor=pointer]:
+                - /url: mailto:ebt@skydynamics.aero
+            - listitem [ref=e481]:
+              - img [ref=e482]
+              - generic [ref=e484]: +30 2813 015 538
+            - listitem [ref=e485]:
+              - img [ref=e486]
+              - generic [ref=e489]:
+                - text: Science & Technology Park of Crete
+                - text: Heraklion, Greece
+      - generic [ref=e490]:
+        - generic [ref=e492]: © 2026 SkyDynamics G.P. All rights reserved.
+        - link [ref=e494] [cursor=pointer]:
+          - /url: https://linkedin.com/company/sky-dynamics
+          - img [ref=e495]
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Deployment complete and live. I can see:
+
+1. "Automated Compliance Reports" in "What Sets Us Apart":
+   - "Automatically generated reports for IOSA, EASA, ICAO, and other compliance systems. All regulatory documentation ready at your fingertips without manual effort."
+
+2. "Complete Training Ecosystem" updated:
+   - "All integrated into the same app: AeroEBT, LMS, TMS, and FSMS. Best user experience, simple in operation. Everything achieved in 3 taps maximum for instructors."
+
+**Deployment summary:**
+- Build completed successfully
+- Deployed to GitHub Pages (`gh-pages` branch)
+- Site is live at: **http://aeroebt.skydynamics.aero/**
+
+All features are live, including:
+- Automated compliance reports (IOSA, EASA, ICAO, etc.)
+- Integrated app messaging (AeroEBT, LMS, TMS, FSMS)
+- 3-taps maximum for instructors
+- All 8 integrations displayed
+
+The website is up to date with all recent changes.
+
+---
+
+_**User (2026-01-16 15:06Z)**_
+
+add also what sets us apart. wide fleet coverage and another ready made data for fast onboarding like ready made scenarios to edit by yourself with ai or ready databases of aircraft manuals failures events etc. 
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Adding "Wide fleet coverage" and "Ready-made data for fast onboarding" to "What Sets Us Apart". Updating the unique features:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+</details>
 </tool-use>
 
 ---

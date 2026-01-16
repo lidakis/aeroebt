@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import {
   ArrowRight, Plane, Brain, GraduationCap, Building2, Shield, Lock,
   CheckCircle2, FileCheck, Award, Mail, Server, Cpu, BarChart3,
-  Wrench, Tablet, Link2, Globe, Users, Cloud, ShieldCheck, Briefcase
+  Wrench, Tablet, Link2, Globe, Users, Cloud, ShieldCheck, Briefcase,
+  Database
 } from 'lucide-react'
 import './Home.css'
 
@@ -92,6 +93,16 @@ const uniqueFeatures = [
     icon: FileCheck, 
     title: 'Automated Compliance Reports', 
     desc: 'Automatically generated reports for IOSA, EASA, ICAO, and other compliance systems. All regulatory documentation ready at your fingertips without manual effort.' 
+  },
+  { 
+    icon: Plane, 
+    title: 'Wide Fleet Coverage', 
+    desc: 'Comprehensive support for all major aircraft types and models. From narrow-body to wide-body, regional jets to cargo aircraft—we cover your entire fleet.' 
+  },
+  { 
+    icon: Database, 
+    title: 'Ready-Made Data for Fast Onboarding', 
+    desc: 'Quick start with ready-made scenarios to edit yourself with AI assistance, plus ready databases of aircraft manuals, failures, events, and more. Fast-track your implementation.' 
   }
 ]
 
