@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import {
   ArrowRight, Plane, Brain, GraduationCap, Building2, Shield, Lock,
   CheckCircle2, FileCheck, Award, Mail, Server, Cpu, BarChart3,
-  Wrench, Tablet, Link2
+  Wrench, Tablet, Link2, Globe, Users, Cloud, ShieldCheck, Briefcase
 } from 'lucide-react'
 import './Home.css'
 
@@ -111,6 +111,41 @@ const integrations = [
     subtitle: 'Artificial Intelligence',
     desc: 'The most advanced AI system for airlines, deeply integrated with AeroEBT. Leverage machine learning for predictive training analytics and intelligent scenario recommendations.',
     color: '#f59e0b'
+  },
+  {
+    icon: Globe,
+    title: 'WebAIMS Integration',
+    subtitle: 'Crew Management',
+    desc: 'Full integration with WebAIMS for seamless crew management and scheduling. Synchronize training records with crew rostering and qualification tracking.',
+    color: '#8b5cf6'
+  },
+  {
+    icon: Users,
+    title: 'Wingman Application',
+    subtitle: 'Crew Collaboration',
+    desc: 'Connect with Wingman for enhanced crew collaboration and communication. Share training insights and coordinate competency development across your team.',
+    color: '#06b6d4'
+  },
+  {
+    icon: Cloud,
+    title: 'Microsoft 365',
+    subtitle: 'Enterprise Productivity',
+    desc: 'Native integration with Microsoft 365 suite including Teams, SharePoint, and Azure AD. Single sign-on, document management, and seamless collaboration.',
+    color: '#0078d4'
+  },
+  {
+    icon: Briefcase,
+    title: 'Google Workspace',
+    subtitle: 'Cloud Collaboration',
+    desc: 'Full integration with Google Workspace for calendar sync, document sharing, and SSO authentication. Streamline workflows with Gmail and Drive connectivity.',
+    color: '#4285f4'
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Safety Management Systems',
+    subtitle: 'SMS Integration',
+    desc: 'Connect with leading SMS platforms for comprehensive safety data integration. Link training outcomes with safety reports and risk assessments.',
+    color: '#10b981'
   }
 ]
 
