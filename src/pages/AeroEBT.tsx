@@ -40,8 +40,8 @@ const mainFeatures = [
   },
   {
     icon: FileText,
-    title: 'Regulatory Compliance',
-    description: 'Automatic generation of all required CAA and EASA forms. Complete audit trails for regulatory inspections.'
+    title: 'Automated Compliance Reports',
+    description: 'Automatically generated reports for IOSA, EASA, ICAO, CAA, and other compliance systems. All regulatory documentation ready at your fingertips without manual effort.'
   },
   {
     icon: Tablet,

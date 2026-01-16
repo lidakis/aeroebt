@@ -87,6 +87,11 @@ const uniqueFeatures = [
     icon: Award, 
     title: 'From Instructors, For Instructors', 
     desc: 'Built by pilots and instructors with 16+ years of aviation training expertise. We understand your challenges because we\'ve lived them.' 
+  },
+  { 
+    icon: FileCheck, 
+    title: 'Automated Compliance Reports', 
+    desc: 'Automatically generated reports for IOSA, EASA, ICAO, and other compliance systems. All regulatory documentation ready at your fingertips without manual effort.' 
   }
 ]
 
