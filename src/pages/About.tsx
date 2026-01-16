@@ -58,7 +58,7 @@ export default function About() {
           >
             <motion.span className="section-label" variants={fadeInUp}>About SkyDynamics</motion.span>
             <motion.h1 variants={fadeInUp}>
-              Pioneering the Future of<br /><span className="text-gradient">Aviation Training</span>
+              Full EBT Implementation with<br /><span className="text-gradient">Regulatory Compliance</span>
             </motion.h1>
             <motion.p variants={fadeInUp}>
               For over 16 years, we've been developing innovative solutions that help 
