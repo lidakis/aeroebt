@@ -61,7 +61,6 @@ const solutions = [
 
 const stats = [
   { value: '16+', label: 'Years of Aviation Excellence' },
-  { value: '50+', label: 'Airlines & Training Centers' },
   { value: '100%', label: 'Regulatory Compliance' },
   { value: '99.9%', label: 'System Availability' }
 ]

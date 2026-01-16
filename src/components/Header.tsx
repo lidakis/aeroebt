@@ -75,16 +75,14 @@ export default function Header() {
     setActiveDropdown(null)
   }, [location])
 
-  // Initialize theme on mount
+  // Initialize theme on mount - default to light
   useEffect(() => {
     const stored = localStorage.getItem('theme')
     if (stored === 'light' || stored === 'dark') {
       document.documentElement.setAttribute('data-theme', stored)
       dispatch(setTheme(stored))
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.setAttribute('data-theme', 'dark')
-      dispatch(setTheme('dark'))
     }
+    // Default is light, no need to set anything
   }, [dispatch])
 
   return (
