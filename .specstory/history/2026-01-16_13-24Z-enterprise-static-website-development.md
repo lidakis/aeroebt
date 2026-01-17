@@ -43162,3 +43162,730 @@ _**Agent (model default, mode Agent)**_
 
 ---
 
+
+
+---
+
+
+Reviewing Home.tsx structure to decide where to place a horizontal list of supported aircraft:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking where to insert the aircraft list section:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding a horizontal aircraft list section after "What Sets Us Apart". First, updating Home.tsx:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding the aircraft list and creating a new section:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+**Chunk 1**
+Lines added: 13, lines removed: undefined
+
+```diff
+@@ -167,4 +167,17 @@
+  
+  const trainingTypes = ['EBT', 'CBTA', 'AQP', 'MPL', 'Type Rating', 'Recurrent', 'Line Training', 'Ab Initio']
++ 
++ const supportedAircraft = [
++   { code: 'A320', name: 'Airbus A320' },
++   { code: 'A220', name: 'Airbus A220' },
++   { code: 'ATR 72', name: 'ATR 72' },
++   { code: 'ATR 42-400', name: 'ATR 42-400' },
++   { code: 'ATR 42-600', name: 'ATR 42-600' },
++   { code: 'B777', name: 'Boeing 777' },
++   { code: 'B737', name: 'Boeing 737' },
++   { code: 'B787', name: 'Boeing 787' },
++   { code: 'A350', name: 'Airbus A350' },
++   { code: 'A380', name: 'Airbus A380' }
++ ]
+  
+  export default function Home() {
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding the aircraft list section after "What Sets Us Apart":
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+**Chunk 1**
+Lines added: 49, lines removed: undefined
+
+```diff
+@@ -324,4 +324,53 @@
+          &lt;/div&gt;
+        &lt;/section&gt;
++ 
++       {/* Supported Aircraft */}
++       &lt;section className="aircraft-section section-lg"&gt;
++         &lt;div className="container"&gt;
++           &lt;motion.div
++             className="section-header text-center"
++             initial="hidden"
++             whileInView="visible"
++             viewport={{ once: true }}
++             variants={staggerContainer}
++           &gt;
++             &lt;motion.span className="section-label" variants={fadeInUp}&gt;
++               &lt;Plane size={16} style={{ display: 'inline', marginRight: '8px' }} /&gt;
++               Ready-Made Training Data
++             &lt;/motion.span&gt;
++             &lt;motion.h2 variants={fadeInUp}&gt;
++               Supported Aircraft with &lt;span className="text-gradient"&gt;Existing Data&lt;/span&gt;
++             &lt;/motion.h2&gt;
++             &lt;motion.p variants={fadeInUp}&gt;
++               Pre-built scenarios, training documentation, aircraft manuals, failure databases, 
++               and event libraries are available for the following aircraft types.
++             &lt;/motion.p&gt;
++           &lt;/motion.div&gt;
++ 
++           &lt;motion.div
++             className="aircraft-list"
++             initial="hidden"
++             whileInView="visible"
++             viewport={{ once: true }}
++             variants={fadeInUp}
++           &gt;
++             {supportedAircraft.map((aircraft, idx) =&gt; (
++               &lt;motion.div
++                 key={idx}
++                 className="aircraft-badge"
++                 variants={fadeInUp}
++                 whileHover={{ scale: 1.05, y: -4 }}
++                 transition={{ duration: 0.2 }}
++               &gt;
++                 &lt;Plane size={20} /&gt;
++                 &lt;div className="aircraft-info"&gt;
++                   &lt;span className="aircraft-code"&gt;{aircraft.code}&lt;/span&gt;
++                   &lt;span className="aircraft-name"&gt;{aircraft.name}&lt;/span&gt;
++                 &lt;/div&gt;
++               &lt;/motion.div&gt;
++             ))}
++           &lt;/motion.div&gt;
++         &lt;/div&gt;
++       &lt;/section&gt;
+  
+        {/* Integrations */}
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding CSS for the aircraft section. Checking Home.css:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Searching for the unique-section styling:
+
+
+---
+
+<tool-use data-tool-type="search" data-tool-name="grep">
+<details>
+<summary>Tool use: **grep** • Grep for "\.unique-section" in "/Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.css" • 2 matches</summary>
+
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `src/pages/Home.css` | `.unique-section \{` | L215 |
+| `src/pages/Home.css` | `.unique-section::before \{` | L220 |
+
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding CSS for the aircraft section after the unique-section styles:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding the aircraft section CSS:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.css</summary>
+
+**Chunk 1**
+Lines added: 69, lines removed: undefined
+
+```diff
+@@ -311,4 +311,73 @@
+    line-height: 1.65;
+  }
++ 
++ /* Supported Aircraft Section */
++ .aircraft-section {
++   background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
++   position: relative;
++ }
++ 
++ .aircraft-section::before {
++   content: '';
++   position: absolute;
++   top: 0;
++   left: 0;
++   right: 0;
++   height: 1px;
++   background: linear-gradient(90deg, transparent, var(--border-light) 20%, var(--border-light) 80%, transparent);
++ }
++ 
++ .aircraft-list {
++   display: flex;
++   flex-wrap: wrap;
++   gap: var(--space-4);
++   justify-content: center;
++   align-items: center;
++   margin-top: var(--space-12);
++ }
++ 
++ .aircraft-badge {
++   display: flex;
++   align-items: center;
++   gap: var(--space-3);
++   background: var(--bg-card);
++   border: 1px solid var(--border-light);
++   border-radius: var(--radius-lg);
++   padding: var(--space-4) var(--space-6);
++   transition: all var(--transition-base);
++   box-shadow: var(--shadow-card);
++   cursor: default;
++   min-width: 140px;
++ }
++ 
++ .aircraft-badge:hover {
++   border-color: var(--color-primary-300);
++   box-shadow: var(--shadow-card-hover);
++   background: linear-gradient(135deg, var(--bg-card) 0%, var(--color-primary-50) 100%);
++ }
++ 
++ .aircraft-badge svg {
++   color: var(--color-primary-500);
++   flex-shrink: 0;
++ }
++ 
++ .aircraft-info {
++   display: flex;
++   flex-direction: column;
++   gap: 2px;
++ }
++ 
++ .aircraft-code {
++   font-size: var(--text-lg);
++   font-weight: 700;
++   color: var(--text-primary);
++   line-height: 1.2;
++ }
++ 
++ .aircraft-name {
++   font-size: var(--text-xs);
++   color: var(--text-secondary);
++   line-height: 1.2;
++ }
+  
+  /* Integrations Section */
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding responsive styles for the aircraft section. Searching for media queries:
+
+
+---
+
+<tool-use data-tool-type="search" data-tool-name="grep">
+<details>
+<summary>Tool use: **grep** • Grep for "@media.*max-width" in "/Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.css" • 3 matches</summary>
+
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `src/pages/Home.css` | `@media (max-width: 1280px) \{` | L727 |
+| `src/pages/Home.css` | `@media (max-width: 1024px) \{` | L733 |
+| `src/pages/Home.css` | `@media (max-width: 640px) \{` | L816 |
+
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Finding the mobile media query section:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding responsive styles for the aircraft list:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.css</summary>
+
+**Chunk 1**
+Lines added: 36, lines removed: undefined
+
+```diff
+@@ -860,4 +860,40 @@
+      justify-content: center;
+    }
++ 
++   .aircraft-list {
++     gap: var(--space-3);
++     justify-content: flex-start;
++     overflow-x: auto;
++     padding-bottom: var(--space-2);
++     -webkit-overflow-scrolling: touch;
++     scrollbar-width: thin;
++   }
++ 
++   .aircraft-list::-webkit-scrollbar {
++     height: 4px;
++   }
++ 
++   .aircraft-list::-webkit-scrollbar-track {
++     background: var(--bg-secondary);
++     border-radius: var(--radius-full);
++   }
++ 
++   .aircraft-list::-webkit-scrollbar-thumb {
++     background: var(--color-primary-300);
++     border-radius: var(--radius-full);
++   }
++ 
++   .aircraft-badge {
++     min-width: 120px;
++     padding: var(--space-3) var(--space-4);
++   }
++ 
++   .aircraft-code {
++     font-size: var(--text-base);
++   }
++ 
++   .aircraft-name {
++     font-size: 10px;
++   }
+  }
+  
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking the tablet media query section:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking for linting errors:
+
+
+---
+
+<tool-use data-tool-type="generic" data-tool-name="read_lints">
+<details>
+          <summary>Tool use: **read_lints** • Read lints for 2 files</summary>
+      
+Lint paths:
+
+- `src/pages/Home.tsx`
+- `src/pages/Home.css`
+
+Lint results
+
+
+**No lint errors found**
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Building and deploying:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy
+```
+
+```
+yarn run v1.22.22
+$ tsc -b &amp;&amp; vite build
+vite v6.4.1 building for production...
+transforming...
+✓ 1981 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.66 kB │ gzip:   0.78 kB
+dist/assets/index-CyBwTFPn.css   61.13 kB │ gzip:   8.94 kB
+dist/assets/index-yXp_fuzy.js   422.34 kB │ gzip: 126.43 kB
+✓ built in 1.02s
+Done in 2.91s.
+yarn run v1.22.22
+$ yarn build
+$ tsc -b &amp;&amp; vite build
+vite v6.4.1 building for production...
+transforming...
+✓ 1981 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.66 kB │ gzip:   0.78 kB
+dist/assets/index-CyBwTFPn.css   61.13 kB │ gzip:   8.94 kB
+dist/assets/index-yXp_fuzy.js   422.34 kB │ gzip: 126.43 kB
+✓ built in 1.00s
+$ gh-pages -d dist
+Published
+Done in 6.20s.
+
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Committing and pushing changes:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && git add . && git commit -m "Add supported aircraft section with horizontal list of aircraft types with existing training data" && git push origin main</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && git add . && git commit -m "Add supported aircraft section with horizontal list of aircraft types with existing training data" && git push origin main
+```
+
+```
+[main 8835009] Add supported aircraft section with horizontal list of aircraft types with existing training data
+ 3 files changed, 2901 insertions(+), 21532 deletions(-)
+To https://github.com/lidakis/aeroebt.git
+   672802d..8835009  main -&gt; main
+
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+**Deployment complete**
+
+Added a horizontal list of supported aircraft with existing training data. Here's what was added:
+
+**New "Supported Aircraft" section:**
+- Placed after "What Sets Us Apart"
+- Displays 10 aircraft types:
+  - **A320** - Airbus A320
+  - **A220** - Airbus A220
+  - **ATR 72**
+  - **ATR 42-400**
+  - **ATR 42-600**
+  - **B777** - Boeing 777
+  - **B737** - Boeing 737
+  - **B787** - Boeing 787
+  - **A350** - Airbus A350
+  - **A380** - Airbus A380
+
+**Design features:**
+- Horizontal badge layout with icons
+- Hover animations
+- Responsive with horizontal scroll on mobile
+- Section header: "Ready-Made Training Data" with description
+- Badges show aircraft code and full name
+
+The section indicates that pre-built scenarios, training documentation, aircraft manuals, failure databases, and event libraries are available for these aircraft types.
+
+**Changes deployed:**
+- Added aircraft list array with 10 aircraft types
+- Created new "Supported Aircraft" section component
+- Added CSS styles for horizontal layout and responsive design
+- Built and deployed to GitHub Pages
+- Committed and pushed to main branch
+
+The website is live at **http://aeroebt.skydynamics.aero/** with the new supported aircraft section displayed.
+
+---
+
+_**User (2026-01-17 12:25Z)**_
+
+rrect aircraft atr remove the rest
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Updating the aircraft list to only include ATR types: ATR 72, ATR 42-400, ATR 42-600. Removing the rest:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Updating the list to include only ATR aircraft:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+**Chunk 1**
+Lines added: 1, lines removed: 8
+
+```diff
+@@ -169,14 +169,7 @@
+  
+  const supportedAircraft = [
+-   { code: 'A320', name: 'Airbus A320' },
+-   { code: 'A220', name: 'Airbus A220' },
+    { code: 'ATR 72', name: 'ATR 72' },
+    { code: 'ATR 42-400', name: 'ATR 42-400' },
+-   { code: 'ATR 42-600', name: 'ATR 42-600' },
+-   { code: 'B777', name: 'Boeing 777' },
+-   { code: 'B737', name: 'Boeing 737' },
+-   { code: 'B787', name: 'Boeing 787' },
+-   { code: 'A350', name: 'Airbus A350' },
+-   { code: 'A380', name: 'Airbus A380' }
++   { code: 'ATR 42-600', name: 'ATR 42-600' }
+  ]
+  
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Building and deploying:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy
+```
+</details>
+</tool-use>
+
+---
+
+_**User (2026-01-17 12:25Z)**_
+
+no i mean write the following and removeve anything with atr > atr 
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
