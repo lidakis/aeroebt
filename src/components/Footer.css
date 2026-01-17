@@ -133,6 +133,44 @@
   color: var(--color-primary-500);
 }
 
+/* Footer Organizations */
+.footer-organizations {
+  padding: var(--space-12) 0;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: var(--space-8);
+}
+
+.organizations-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+.org-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  opacity: 0.6;
+  transition: all var(--transition-fast);
+  filter: grayscale(100%);
+}
+
+.org-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: translateY(-2px);
+}
+
+.org-logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  max-width: 120px;
+}
+
 /* Footer Bottom */
 .footer-bottom {
   display: flex;
@@ -197,5 +235,17 @@
     flex-direction: column;
     gap: var(--space-4);
     text-align: center;
+  }
+
+  .organizations-logos {
+    gap: var(--space-4);
+  }
+
+  .org-logo {
+    height: 32px;
+  }
+
+  .org-logo img {
+    max-width: 80px;
   }
 }

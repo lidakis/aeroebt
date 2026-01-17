@@ -639,6 +639,81 @@
   box-shadow: var(--shadow-2xl);
 }
 
+/* Clients Section */
+.clients-section {
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  position: relative;
+}
+
+.clients-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-light) 20%, var(--border-light) 80%, transparent);
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.client-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-card);
+  min-height: 120px;
+}
+
+.client-logo:hover {
+  border-color: var(--color-primary-300);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.client-logo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  color: var(--text-tertiary);
+  font-size: var(--text-sm);
+}
+
+.client-logo-placeholder svg {
+  opacity: 0.4;
+}
+
+.client-logo img {
+  max-width: 100%;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all var(--transition-base);
+}
+
+.client-logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
 /* CTA Section */
 .cta-section {
   padding: var(--space-20) 0;
@@ -799,6 +874,10 @@
     margin: 0 auto;
   }
 
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .cta-card {
     flex-direction: column;
     text-align: center;
@@ -894,5 +973,15 @@
 
   .aircraft-name {
     font-size: 10px;
+  }
+
+  .clients-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .client-logo {
+    min-height: 100px;
+    padding: var(--space-6);
   }
 }

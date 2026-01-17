@@ -43889,3 +43889,367 @@ _**Agent (model default, mode Agent)**_
 
 ---
 
+
+Updating the list to a single "ATR" entry, removing the specific ATR models:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+**Chunk 1**
+Lines added: 1, lines removed: 3
+
+```diff
+@@ -169,7 +169,5 @@
+  
+  const supportedAircraft = [
+-   { code: 'ATR 72', name: 'ATR 72' },
+-   { code: 'ATR 42-400', name: 'ATR 42-400' },
+-   { code: 'ATR 42-600', name: 'ATR 42-600' }
++   { code: 'ATR', name: 'ATR' }
+  ]
+  
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Building and deploying:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy
+```
+
+```
+yarn run v1.22.22
+$ tsc -b &amp;&amp; vite build
+vite v6.4.1 building for production...
+transforming...
+✓ 1981 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.66 kB │ gzip:   0.78 kB
+dist/assets/index-CyBwTFPn.css   61.13 kB │ gzip:   8.94 kB
+dist/assets/index-CoA13yzs.js   422.03 kB │ gzip: 126.34 kB
+✓ built in 985ms
+Done in 2.61s.
+yarn run v1.22.22
+$ yarn build
+$ tsc -b &amp;&amp; vite build
+vite v6.4.1 building for production...
+transforming...
+✓ 1981 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.66 kB │ gzip:   0.78 kB
+dist/assets/index-CyBwTFPn.css   61.13 kB │ gzip:   8.94 kB
+dist/assets/index-CoA13yzs.js   422.03 kB │ gzip: 126.34 kB
+✓ built in 972ms
+$ gh-pages -d dist
+Published
+Done in 5.76s.
+
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Committing the changes:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && git add . && git commit -m "Update aircraft list to show only ATR" && git push origin main</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && git add . && git commit -m "Update aircraft list to show only ATR" && git push origin main
+```
+
+```
+[main 2dabfcd] Update aircraft list to show only ATR
+ 2 files changed, 728 insertions(+), 10 deletions(-)
+To https://github.com/lidakis/aeroebt.git
+   8835009..2dabfcd  main -&gt; main
+
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+**Update complete**
+
+The aircraft list now shows a single "ATR" entry. Removed the specific ATR models (ATR 72, ATR 42-400, ATR 42-600).
+
+**Changes deployed:**
+- Updated aircraft list to show only "ATR"
+- Built and deployed to GitHub Pages
+- Committed and pushed to main branch
+
+The supported aircraft section is live at **http://aeroebt.skydynamics.aero/** with just "ATR" displayed.
+
+---
+
+_**User (2026-01-17 12:25Z)**_
+
+put some logos with links to easa , icao , small same sizes all at the footer , and other . also add logo of european union , and also add a sections with clients of skydynamics
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Checking the Footer component:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking the Home page to determine where to add the clients section:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding organization logos to the Footer and creating a clients section. Updating the Footer first:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.tsx</summary>
+
+**Chunk 1**
+Lines added: 42, lines removed: undefined
+
+```diff
+@@ -114,4 +114,46 @@
+            &lt;/div&gt;
+          &lt;/div&gt;
++ 
++         {/* Organization Logos */}
++         &lt;div className="footer-organizations"&gt;
++           &lt;div className="organizations-logos"&gt;
++             &lt;a 
++               href="https://www.easa.europa.eu/" 
++               target="_blank" 
++               rel="noopener noreferrer"
++               className="org-logo"
++               title="European Union Aviation Safety Agency"
++             &gt;
++               &lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/EASA_logo.svg/200px-EASA_logo.svg.png" alt="EASA" /&gt;
++             &lt;/a&gt;
++             &lt;a 
++               href="https://www.icao.int/" 
++               target="_blank" 
++               rel="noopener noreferrer"
++               className="org-logo"
++               title="International Civil Aviation Organization"
++             &gt;
++               &lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/ICAO_logo.svg/200px-ICAO_logo.svg.png" alt="ICAO" /&gt;
++             &lt;/a&gt;
++             &lt;a 
++               href="https://european-union.europa.eu/index_en" 
++               target="_blank" 
++               rel="noopener noreferrer"
++               className="org-logo"
++               title="European Union"
++             &gt;
++               &lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/200px-Flag_of_Europe.svg.png" alt="European Union" /&gt;
++             &lt;/a&gt;
++             &lt;a 
++               href="https://www.iso.org/" 
++               target="_blank" 
++               rel="noopener noreferrer"
++               className="org-logo"
++               title="International Organization for Standardization"
++             &gt;
++               &lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/ISO_logo.svg/200px-ISO_logo.svg.png" alt="ISO" /&gt;
++             &lt;/a&gt;
++           &lt;/div&gt;
++         &lt;/div&gt;
+  
+          {/* Bottom */}
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding CSS for the organization logos section:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.css</summary>
+
+**Chunk 1**
+Lines added: 38, lines removed: undefined
+
+```diff
+@@ -133,4 +133,42 @@
+    color: var(--color-primary-500);
+  }
++ 
++ /* Footer Organizations */
++ .footer-organizations {
++   padding: var(--space-12) 0;
++   border-bottom: 1px solid var(--border-light);
++   margin-bottom: var(--space-8);
++ }
++ 
++ .organizations-logos {
++   display: flex;
++   align-items: center;
++   justify-content: center;
++   flex-wrap: wrap;
++   gap: var(--space-8);
++ }
++ 
++ .org-logo {
++   display: flex;
++   align-items: center;
++   justify-content: center;
++   height: 40px;
++   opacity: 0.6;
++   transition: all var(--transition-fast);
++   filter: grayscale(100%);
++ }
++ 
++ .org-logo:hover {
++   opacity: 1;
++   filter: grayscale(0%);
++   transform: translateY(-2px);
++ }
++ 
++ .org-logo img {
++   height: 100%;
++   width: auto;
++   object-fit: contain;
++   max-width: 120px;
++ }
+  
+  /* Footer Bottom */
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking the Home page structure to add the clients section:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding a clients section. Checking imports in Home.tsx:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+

@@ -519,6 +519,77 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Clients Section */}
+      <section className="clients-section section-lg">
+        <div className="container">
+          <motion.div
+            className="section-header text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.span className="section-label" variants={fadeInUp}>
+              <Building2 size={16} style={{ display: 'inline', marginRight: '8px' }} />
+              Trusted By Industry Leaders
+            </motion.span>
+            <motion.h2 variants={fadeInUp}>
+              SkyDynamics <span className="text-gradient">Clients</span>
+            </motion.h2>
+            <motion.p variants={fadeInUp}>
+              Leading airlines and training organizations worldwide trust SkyDynamics 
+              for their aviation training and management needs.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            className="clients-grid"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {/* Client logos will be added here - placeholder structure */}
+            <motion.div className="client-logo" variants={fadeInUp}>
+              <div className="client-logo-placeholder">
+                <Building2 size={32} />
+                <span>Client Logo</span>
+              </div>
+            </motion.div>
+            <motion.div className="client-logo" variants={fadeInUp}>
+              <div className="client-logo-placeholder">
+                <Building2 size={32} />
+                <span>Client Logo</span>
+              </div>
+            </motion.div>
+            <motion.div className="client-logo" variants={fadeInUp}>
+              <div className="client-logo-placeholder">
+                <Building2 size={32} />
+                <span>Client Logo</span>
+              </div>
+            </motion.div>
+            <motion.div className="client-logo" variants={fadeInUp}>
+              <div className="client-logo-placeholder">
+                <Building2 size={32} />
+                <span>Client Logo</span>
+              </div>
+            </motion.div>
+            <motion.div className="client-logo" variants={fadeInUp}>
+              <div className="client-logo-placeholder">
+                <Building2 size={32} />
+                <span>Client Logo</span>
+              </div>
+            </motion.div>
+            <motion.div className="client-logo" variants={fadeInUp}>
+              <div className="client-logo-placeholder">
+                <Building2 size={32} />
+                <span>Client Logo</span>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="cta-section">
         <div className="container">

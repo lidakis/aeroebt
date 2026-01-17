@@ -114,6 +114,48 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Organization Logos */}
+        <div className="footer-organizations">
+          <div className="organizations-logos">
+            <a 
+              href="https://www.easa.europa.eu/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="org-logo"
+              title="European Union Aviation Safety Agency"
+            >
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/EASA_logo.svg/200px-EASA_logo.svg.png" alt="EASA" />
+            </a>
+            <a 
+              href="https://www.icao.int/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="org-logo"
+              title="International Civil Aviation Organization"
+            >
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/ICAO_logo.svg/200px-ICAO_logo.svg.png" alt="ICAO" />
+            </a>
+            <a 
+              href="https://european-union.europa.eu/index_en" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="org-logo"
+              title="European Union"
+            >
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/200px-Flag_of_Europe.svg.png" alt="European Union" />
+            </a>
+            <a 
+              href="https://www.iso.org/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="org-logo"
+              title="International Organization for Standardization"
+            >
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/ISO_logo.svg/200px-ISO_logo.svg.png" alt="ISO" />
+            </a>
+          </div>
+        </div>
+
         {/* Bottom */}
         <div className="footer-bottom">
           <div className="footer-bottom-left">
