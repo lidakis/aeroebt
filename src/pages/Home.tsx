@@ -168,7 +168,14 @@ const integrations = [
 const trainingTypes = ['EBT', 'CBTA', 'AQP', 'MPL', 'Type Rating', 'Recurrent', 'Line Training', 'Ab Initio']
 
 const supportedAircraft = [
-  { code: 'ATR', name: 'ATR' }
+  { code: 'A320', name: 'Airbus A320' },
+  { code: 'A220', name: 'Airbus A220' },
+  { code: 'ATR 72', name: 'ATR 72' },
+  { code: 'B777', name: 'Boeing 777' },
+  { code: 'B737', name: 'Boeing 737' },
+  { code: 'B787', name: 'Boeing 787' },
+  { code: 'A350', name: 'Airbus A350' },
+  { code: 'A380', name: 'Airbus A380' }
 ]
 
 export default function Home() {
