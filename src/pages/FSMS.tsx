@@ -89,7 +89,9 @@ export default function FSMS() {
             </motion.p>
             <motion.p className="product-description" variants={fadeInUp}>
               The complete solution for flight schools, ATOs, and training organizations. 
-              Scheduling, fleet management, student tracking, and more—all in one platform.
+              <strong> All-in-one platform</strong> for scheduling, fleet management, student tracking, 
+              financial management, and regulatory compliance. Streamline operations and reduce 
+              administrative overhead by up to <strong>50%</strong>.
             </motion.p>
             <motion.div className="product-hero-actions" variants={fadeInUp}>
               <Link to="/contact" className="btn btn-primary btn-lg">
@@ -155,11 +157,18 @@ export default function FSMS() {
                 <h3>{feature.title}</h3>
                 <p>{feature.description}</p>
                 <ul className="fsms-feature-list">
-                  {feature.features.map((f) => (
-                    <li key={f}>
+                  {feature.features.map((f, idx) => (
+                    <motion.li 
+                      key={f}
+                      variants={fadeInUp}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      transition={{ delay: idx * 0.05 }}
+                    >
                       <CheckCircle2 size={14} />
-                      {f}
-                    </li>
+                      <span className="feature-chip">{f}</span>
+                    </motion.li>
                   ))}
                 </ul>
               </motion.div>

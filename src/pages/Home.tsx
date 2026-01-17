@@ -192,15 +192,39 @@ const clients = [
   }
 ]
 
-const supportedAircraft = [
-  { code: 'A320', name: 'Airbus A320' },
-  { code: 'A220', name: 'Airbus A220' },
-  { code: 'ATR 72', name: 'ATR 72' },
-  { code: 'B777', name: 'Boeing 777' },
-  { code: 'B737', name: 'Boeing 737' },
-  { code: 'B787', name: 'Boeing 787' },
-  { code: 'A350', name: 'Airbus A350' },
-  { code: 'A380', name: 'Airbus A380' }
+const supportedAircraftGroups = [
+  {
+    manufacturer: 'Airbus',
+    aircraft: [
+      { code: 'A320', name: 'Airbus A320' },
+      { code: 'A220', name: 'Airbus A220' },
+      { code: 'A350', name: 'Airbus A350' },
+      { code: 'A380', name: 'Airbus A380' }
+    ]
+  },
+  {
+    manufacturer: 'Boeing',
+    aircraft: [
+      { code: 'B777', name: 'Boeing 777' },
+      { code: 'B737', name: 'Boeing 737' },
+      { code: 'B787', name: 'Boeing 787' }
+    ]
+  },
+  {
+    manufacturer: 'ATR',
+    aircraft: [
+      { code: 'ATR 72', name: 'ATR 72' }
+    ]
+  },
+  {
+    manufacturer: 'Embraer',
+    aircraft: [
+      { code: 'E195', name: 'Embraer E195' },
+      { code: 'E190', name: 'Embraer E190' },
+      { code: 'E175', name: 'Embraer E175' },
+      { code: 'E170', name: 'Embraer E170' }
+    ]
+  }
 ]
 
 export default function Home() {
@@ -384,24 +408,30 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="aircraft-list"
+            className="aircraft-groups"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fadeInUp}
+            variants={staggerContainer}
           >
-            {supportedAircraft.map((aircraft, idx) => (
-              <motion.div
-                key={idx}
-                className="aircraft-badge"
-                variants={fadeInUp}
-                whileHover={{ scale: 1.05, y: -4 }}
-                transition={{ duration: 0.2 }}
-              >
-                <Plane size={20} />
-                <div className="aircraft-info">
-                  <span className="aircraft-code">{aircraft.code}</span>
-                  <span className="aircraft-name">{aircraft.name}</span>
+            {supportedAircraftGroups.map((group, groupIdx) => (
+              <motion.div key={groupIdx} className="aircraft-group" variants={fadeInUp}>
+                <div className="aircraft-list">
+                  {group.aircraft.map((aircraft, idx) => (
+                    <motion.div
+                      key={idx}
+                      className="aircraft-badge"
+                      variants={fadeInUp}
+                      whileHover={{ scale: 1.05, y: -4 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Plane size={20} />
+                      <div className="aircraft-info">
+                        <span className="aircraft-code">{aircraft.code}</span>
+                        <span className="aircraft-name">{aircraft.name}</span>
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
               </motion.div>
             ))}

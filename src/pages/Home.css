@@ -358,13 +358,61 @@
   background: linear-gradient(90deg, transparent, var(--border-light) 20%, var(--border-light) 80%, transparent);
 }
 
+.aircraft-groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+}
+
+.aircraft-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.manufacturer-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  max-width: 240px;
+}
+
+.manufacturer-logo-boeing {
+  height: 160px;
+  max-width: 640px;
+}
+
+.manufacturer-logo-embraer {
+  height: 160px;
+  max-width: 640px;
+}
+
+.manufacturer-logo-atr {
+  height: 30px;
+  max-width: 120px;
+}
+
+.manufacturer-logo-airbus {
+  height: 60px;
+  max-width: 240px;
+}
+
+.aircraft-group-title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
 .aircraft-list {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
   justify-content: center;
   align-items: center;
-  margin-top: var(--space-12);
 }
 
 .aircraft-badge {

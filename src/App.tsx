@@ -10,6 +10,8 @@ import About from './pages/About'
 import Plans from './pages/Plans'
 import Contact from './pages/Contact'
 import FAQ from './pages/FAQ'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsOfUse from './pages/TermsOfUse'
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path="plans" element={<Plans />} />
           <Route path="contact" element={<Contact />} />
           <Route path="faq" element={<FAQ />} />
+          <Route path="privacy" element={<PrivacyPolicy />} />
+          <Route path="terms" element={<TermsOfUse />} />
         </Route>
       </Routes>
     </AnimatePresence>

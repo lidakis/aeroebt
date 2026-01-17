@@ -160,6 +160,11 @@ export default function Footer() {
         <div className="footer-bottom">
           <div className="footer-bottom-left">
             <span>© {new Date().getFullYear()} SkyDynamics G.P.</span>
+            <div className="footer-legal-links">
+              <Link to="/privacy">Privacy Policy</Link>
+              <span className="footer-separator">•</span>
+              <Link to="/terms">Terms of Use</Link>
+            </div>
           </div>
           <div className="footer-bottom-right">
             <a href="https://linkedin.com/company/sky-dynamics" target="_blank" rel="noopener noreferrer">

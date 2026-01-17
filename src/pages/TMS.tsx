@@ -76,8 +76,10 @@ export default function TMS() {
               Complete Training Lifecycle Management
             </motion.p>
             <motion.p className="product-description" variants={fadeInUp}>
-              Manage your entire training operation from a single platform. LMS, qualification tracking, 
-              document management, and analytics—all integrated with AeroEBT.
+              Manage your entire training operation from a single platform. <strong>Integrated LMS, 
+              qualification tracking, document management, and advanced analytics</strong>—all seamlessly 
+              connected with AeroEBT. Reduce training administration time by up to <strong>70%</strong> while 
+              ensuring complete regulatory compliance.
             </motion.p>
             <motion.div className="product-hero-actions" variants={fadeInUp}>
               <Link to="/contact" className="btn btn-primary btn-lg">
@@ -124,11 +126,18 @@ export default function TMS() {
                   <h3>{module.title}</h3>
                   <p>{module.description}</p>
                   <ul className="module-features">
-                    {module.features.map((feature) => (
-                      <li key={feature}>
+                    {module.features.map((feature, idx) => (
+                      <motion.li 
+                        key={feature}
+                        variants={fadeInUp}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ delay: idx * 0.05 }}
+                      >
                         <CheckCircle2 size={14} />
-                        {feature}
-                      </li>
+                        <span className="feature-chip">{feature}</span>
+                      </motion.li>
                     ))}
                   </ul>
                 </div>
@@ -183,15 +192,16 @@ export default function TMS() {
               <Calendar size={48} style={{ color: '#10b981' }} />
               <h2>Seamless Integration</h2>
               <p>
-                TMS integrates perfectly with AeroEBT, AeroBrain, and third-party systems including 
-                scheduling software, HR systems, and crew management tools.
+                TMS integrates perfectly with <strong>AeroEBT, AeroBrain, and leading third-party systems</strong> including 
+                scheduling software, HR systems, crew management tools, and enterprise platforms. 
+                <strong> RESTful APIs</strong> and <strong>webhooks</strong> ensure smooth data flow across your entire ecosystem.
               </p>
               <div className="integration-logos">
-                <span>AIMS</span>
-                <span>SAP</span>
-                <span>Outlook</span>
-                <span>Google</span>
+                <span>WebAIMS</span>
+                <span>Microsoft 365</span>
+                <span>Google Workspace</span>
                 <span>Custom API</span>
+                <span>AeroEBT</span>
               </div>
             </div>
           </div>
