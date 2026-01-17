@@ -171,6 +171,31 @@
   max-width: 120px;
 }
 
+.org-logo-bg {
+  background: #1e293b;
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border-light);
+  filter: none !important;
+}
+
+.org-logo-bg:hover {
+  background: #334155;
+  border-color: var(--color-primary-300);
+}
+
+.org-logo-bg img {
+  filter: none !important;
+}
+
+[data-theme="dark"] .org-logo-bg {
+  background: #e2e8f0;
+}
+
+[data-theme="dark"] .org-logo-bg:hover {
+  background: #f1f5f9;
+}
+
 /* Footer Bottom */
 .footer-bottom {
   display: flex;

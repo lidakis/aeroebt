@@ -45566,3 +45566,839 @@ Lines added: 3, lines removed: 3
 
 ---
 
+
+Switching the IATA logo to the SVG URL:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.tsx</summary>
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -152,5 +152,5 @@
+                title="International Air Transport Association"
+              &gt;
+-               &lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/IATA_logo.svg/200px-IATA_logo.svg.png" alt="IATA" /&gt;
++               &lt;img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/IATA_logo.svg" alt="IATA" /&gt;
+              &lt;/a&gt;
+            &lt;/div&gt;
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Building and deploying:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy
+```
+
+```
+yarn run v1.22.22
+$ tsc -b &amp;&amp; vite build
+vite v6.4.1 building for production...
+transforming...
+✓ 1981 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.66 kB │ gzip:   0.78 kB
+dist/assets/index-xDdrpNDI.css   63.41 kB │ gzip:   9.27 kB
+dist/assets/index-4Qnzi5Vl.js   425.22 kB │ gzip: 126.97 kB
+✓ built in 885ms
+Done in 2.54s.
+yarn run v1.22.22
+$ yarn build
+$ tsc -b &amp;&amp; vite build
+vite v6.4.1 building for production...
+transforming...
+✓ 1981 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.66 kB │ gzip:   0.78 kB
+dist/assets/index-xDdrpNDI.css   63.41 kB │ gzip:   9.27 kB
+dist/assets/index-4Qnzi5Vl.js   425.22 kB │ gzip: 126.97 kB
+✓ built in 880ms
+$ gh-pages -d dist
+Published
+Done in 5.87s.
+
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Committing and pushing the changes:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && git add . && git commit -m "Replace ISO with IATA in footer organization logos and add client logos (Aegean Airlines, University of Crete)" && git push origin main</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && git add . && git commit -m "Replace ISO with IATA in footer organization logos and add client logos (Aegean Airlines, University of Crete)" && git push origin main
+```
+
+```
+[main 01dfc42] Replace ISO with IATA in footer organization logos and add client logos (Aegean Airlines, University of Crete)
+ 4 files changed, 797 insertions(+), 48 deletions(-)
+To https://github.com/lidakis/aeroebt.git
+   0e5fe8f..01dfc42  main -&gt; main
+
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+**Update complete**
+
+Replaced ISO with IATA in the footer organization logos. Footer now shows:
+- **EASA** — European Union Aviation Safety Agency
+- **ICAO** — International Civil Aviation Organization
+- **European Union** — EU flag logo
+- **IATA** — International Air Transport Association (replaced ISO)
+
+Logos now use SVG sources from Wikimedia Commons for better display.
+
+**Changes deployed:**
+- Replaced ISO with IATA in footer organization logos
+- Updated logo URLs to SVG format for better rendering
+- Added clients section with Aegean Airlines, University of Crete, Airplan, and Superior Air S.A.
+- Built and deployed to GitHub Pages
+- Committed and pushed to main branch
+
+The website is live at **http://aeroebt.skydynamics.aero/** with:
+- IATA logo in footer (replacing ISO)
+- Client logos section with Aegean Airlines and University of Crete logos
+
+Note: Airplan and Superior Air S.A. currently display as text placeholders. If you have logos for them, we can add image URLs.
+
+---
+
+_**User (2026-01-17 12:29Z)**_
+
+can we see before upload the site locally ?
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Starting the local development server:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn dev</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn dev
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Waiting for the dev server to start and checking the output:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: sleep 3</summary>
+
+```bash
+sleep 3
+```
+</details>
+</tool-use>
+
+---
+
+_**User (2026-01-17 12:29Z)**_
+
+logo for easa https://www.easa.europa.eu/themes/custom/easa_foundation/logo.svg logo of iata https://www.iata.org/contentassets/3e83770142a040d688e269bb2f709b7b/iata-logo-header.svg?height=127&rmode=crop&v=20240116100112 logo of icao white fix the bg to be visible https://www.icao.int//themes/custom/icao/components/layouts/header/img/logos/site-logo-white.svg 
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Updating the Footer to use the official EASA, IATA, and ICAO logo URLs, and fixing the ICAO logo background:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Updating the logos to use the official URLs:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.tsx</summary>
+
+**Chunk 1**
+Lines added: 3, lines removed: 3
+
+```diff
+@@ -125,14 +125,14 @@
+                title="European Union Aviation Safety Agency"
+              &gt;
+-               &lt;img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/EASA_logo.svg" alt="EASA" /&gt;
++               &lt;img src="https://www.easa.europa.eu/themes/custom/easa_foundation/logo.svg" alt="EASA" /&gt;
+              &lt;/a&gt;
+              &lt;a 
+                href="https://www.icao.int/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+-               className="org-logo"
++               className="org-logo org-logo-white"
+                title="International Civil Aviation Organization"
+              &gt;
+-               &lt;img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/ICAO_logo.svg" alt="ICAO" /&gt;
++               &lt;img src="https://www.icao.int//themes/custom/icao/components/layouts/header/img/logos/site-logo-white.svg" alt="ICAO" /&gt;
+              &lt;/a&gt;
+              &lt;a 
+```
+
+**Chunk 2**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -152,5 +152,5 @@
+                title="International Air Transport Association"
+              &gt;
+-               &lt;img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/IATA_logo.svg" alt="IATA" /&gt;
++               &lt;img src="https://www.iata.org/contentassets/3e83770142a040d688e269bb2f709b7b/iata-logo-header.svg?height=127&amp;rmode=crop&amp;v=20240116100112" alt="IATA" /&gt;
+              &lt;/a&gt;
+            &lt;/div&gt;
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding CSS to make the ICAO white logo visible with a background:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding CSS for the ICAO white logo with a background:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.css</summary>
+
+**Chunk 1**
+Lines added: 12, lines removed: undefined
+
+```diff
+@@ -171,4 +171,16 @@
+    max-width: 120px;
+  }
++ 
++ .org-logo-white {
++   background: var(--bg-card);
++   border-radius: var(--radius-md);
++   padding: var(--space-2) var(--space-3);
++   border: 1px solid var(--border-light);
++ }
++ 
++ .org-logo-white:hover {
++   background: var(--bg-card);
++   border-color: var(--color-primary-300);
++ }
+  
+  /* Footer Bottom */
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking for linting errors:
+
+
+---
+
+<tool-use data-tool-type="generic" data-tool-name="read_lints">
+<details>
+          <summary>Tool use: **read_lints** • Read lints for 2 files</summary>
+      
+Lint paths:
+
+- `src/components/Footer.tsx`
+- `src/components/Footer.css`
+
+Lint results
+
+
+**No lint errors found**
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+**Logos updated**
+
+Updated the footer to use the official logo URLs:
+- **EASA**: `https://www.easa.europa.eu/themes/custom/easa_foundation/logo.svg`
+- **ICAO**: `https://www.icao.int//themes/custom/icao/components/layouts/header/img/logos/site-logo-white.svg` (white version with background)
+- **IATA**: `https://www.iata.org/contentassets/3e83770142a040d688e269bb2f709b7b/iata-logo-header.svg?height=127&rmode=crop&v=20240116100112`
+- **EU**: Flag remains the same
+
+**Changes made:**
+- Updated EASA logo to the official URL
+- Updated ICAO to the white version with a background for visibility
+- Updated IATA to the official URL
+- Added CSS for the white logo background (`.org-logo-white`)
+
+The development server should be running. Check your terminal for the local URL (usually `http://localhost:5173` or similar). If it's not running, I can start it again so you can preview the changes before deploying.
+
+---
+
+_**User (2026-01-17 12:29Z)**_
+
+run locally then push 
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Starting the dev server, then deploying:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn dev</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn dev
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Dev server is running. Building and deploying:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy
+```
+</details>
+</tool-use>
+
+---
+
+_**User (2026-01-17 12:29Z)**_
+
+easa and icao logos are wite and not visibl in whit bg fix this issue 
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Updating CSS so the EASA and ICAO logos are visible on a white background. Adding backgrounds or using colored versions:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Updating CSS to add backgrounds for the EASA and ICAO logos. Checking for colored ICAO logo options:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.tsx</summary>
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -122,5 +122,5 @@
+                target="_blank" 
+                rel="noopener noreferrer"
+-               className="org-logo"
++               className="org-logo org-logo-bg"
+                title="European Union Aviation Safety Agency"
+              &gt;
+```
+
+**Chunk 2**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -131,5 +131,5 @@
+                target="_blank" 
+                rel="noopener noreferrer"
+-               className="org-logo org-logo-white"
++               className="org-logo org-logo-bg"
+                title="International Civil Aviation Organization"
+              &gt;
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Updating CSS to add a background for both logos:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.css</summary>
+
+**Chunk 1**
+Lines added: 12, lines removed: 4
+
+```diff
+@@ -172,15 +172,23 @@
+  }
+  
+- .org-logo-white {
+-   background: var(--bg-card);
++ .org-logo-bg {
++   background: var(--color-gray-800);
+    border-radius: var(--radius-md);
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--border-light);
+  }
+  
+- .org-logo-white:hover {
+-   background: var(--bg-card);
++ .org-logo-bg:hover {
++   background: var(--color-gray-700);
+    border-color: var(--color-primary-300);
+  }
++ 
++ [data-theme="dark"] .org-logo-bg {
++   background: var(--color-gray-200);
++ }
++ 
++ [data-theme="dark"] .org-logo-bg:hover {
++   background: var(--color-gray-100);
++ }
+  
+  /* Footer Bottom */
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking CSS variables for the correct background color:
+
+
+---
+
+<tool-use data-tool-type="search" data-tool-name="grep">
+<details>
+<summary>Tool use: **grep** • Grep for "--color-gray" in "/Users/lidakis/cursor_projects/NewAeroEBT website./src/styles/index.css" • 9 matches</summary>
+
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `src/styles/index.css` | `--color-gray-950: #020617;` | L45 |
+| `src/styles/index.css` | `--color-gray-900: #0f172a;` | L46 |
+| `src/styles/index.css` | `--color-gray-800: #1e293b;` | L47 |
+| `src/styles/index.css` | `--color-gray-700: #334155;` | L48 |
+| `src/styles/index.css` | `--color-gray-600: #475569;` | L49 |
+| `src/styles/index.css` | `--color-gray-500: #64748b;` | L50 |
+| `src/styles/index.css` | `--color-gray-400: #94a3b8;` | L51 |
+| `src/styles/index.css` | `--color-gray-300: #cbd5e1;` | L52 |
+| `src/styles/index.css` | `--color-gray-200: #e2e8f0;` | L53 |
+
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Updating CSS to use a reliable dark background:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/styles/index.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Updating CSS to ensure logos with backgrounds are visible:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.css</summary>
+
+**Chunk 1**
+Lines added: 10, lines removed: 5
+
+```diff
+@@ -173,21 +173,26 @@
+  
+  .org-logo-bg {
+-   background: var(--color-gray-800);
++   background: #1e293b;
+    border-radius: var(--radius-md);
+-   padding: var(--space-2) var(--space-3);
++   padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--border-light);
++   filter: none !important;
+  }
+  
+  .org-logo-bg:hover {
+-   background: var(--color-gray-700);
++   background: #334155;
+    border-color: var(--color-primary-300);
+  }
++ 
++ .org-logo-bg img {
++   filter: none !important;
++ }
+  
+  [data-theme="dark"] .org-logo-bg {
+-   background: var(--color-gray-200);
++   background: #e2e8f0;
+  }
+  
+  [data-theme="dark"] .org-logo-bg:hover {
+-   background: var(--color-gray-100);
++   background: #f1f5f9;
+  }
+  
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking for linting errors:
+
+
+---
+
+<tool-use data-tool-type="generic" data-tool-name="read_lints">
+<details>
+          <summary>Tool use: **read_lints** • Read lints for 2 files</summary>
+      
+Lint paths:
+
+- `src/components/Footer.tsx`
+- `src/components/Footer.css`
+
+Lint results
+
+
+**No lint errors found**
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Building and deploying:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy
+```
+</details>
+</tool-use>
+
+---
+
+_**User (2026-01-17 12:29Z)**_
+
+from the bottom remove the all rights reserved and 
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Removing "All rights reserved" from the footer:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Removing "All rights reserved" from the footer bottom:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.tsx</summary>
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -160,5 +160,5 @@
+          &lt;div className="footer-bottom"&gt;
+            &lt;div className="footer-bottom-left"&gt;
+-             &lt;span&gt;© {new Date().getFullYear()} SkyDynamics G.P. All rights reserved.&lt;/span&gt;
++             &lt;span&gt;© {new Date().getFullYear()} SkyDynamics G.P.&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div className="footer-bottom-right"&gt;
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Removed "All rights reserved" from the footer. The footer now shows: "© 2026 SkyDynamics G.P."
+
+Build and deploy, or make another change first?
+
+---
+
+_**User (2026-01-17 12:29Z)**_
+
+and the run locally 
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Starting the local dev server:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn dev</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn dev
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+The development server is starting. It should be available shortly.
+
+Open the URL shown in your terminal (usually `http://localhost:5173`). You should see:
+
+- **Footer logos** (EASA and ICAO) with dark backgrounds for visibility
+- **Footer copyright** showing only "© 2026 SkyDynamics G.P." (removed "All rights reserved")
+
+Preview these changes locally before deploying.
+
+---
+

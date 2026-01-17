@@ -121,19 +121,19 @@ export default function Footer() {
               href="https://www.easa.europa.eu/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="org-logo"
+              className="org-logo org-logo-bg"
               title="European Union Aviation Safety Agency"
             >
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/EASA_logo.svg" alt="EASA" />
+              <img src="https://www.easa.europa.eu/themes/custom/easa_foundation/logo.svg" alt="EASA" />
             </a>
             <a 
               href="https://www.icao.int/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="org-logo"
+              className="org-logo org-logo-bg"
               title="International Civil Aviation Organization"
             >
-              <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/ICAO_logo.svg" alt="ICAO" />
+              <img src="https://www.icao.int//themes/custom/icao/components/layouts/header/img/logos/site-logo-white.svg" alt="ICAO" />
             </a>
             <a 
               href="https://european-union.europa.eu/index_en" 
@@ -151,7 +151,7 @@ export default function Footer() {
               className="org-logo"
               title="International Air Transport Association"
             >
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/IATA_logo.svg" alt="IATA" />
+              <img src="https://www.iata.org/contentassets/3e83770142a040d688e269bb2f709b7b/iata-logo-header.svg?height=127&rmode=crop&v=20240116100112" alt="IATA" />
             </a>
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="footer-bottom">
           <div className="footer-bottom-left">
-            <span>© {new Date().getFullYear()} SkyDynamics G.P. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} SkyDynamics G.P.</span>
           </div>
           <div className="footer-bottom-right">
             <a href="https://linkedin.com/company/sky-dynamics" target="_blank" rel="noopener noreferrer">
