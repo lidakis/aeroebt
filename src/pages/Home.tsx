@@ -167,6 +167,29 @@ const integrations = [
 
 const trainingTypes = ['EBT', 'CBTA', 'AQP', 'MPL', 'Type Rating', 'Recurrent', 'Line Training', 'Ab Initio']
 
+const clients = [
+  {
+    name: 'Aegean Airlines',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Aegean_Airlines_Logo_2020.png/200px-Aegean_Airlines_Logo_2020.png',
+    url: 'https://www.aegeanair.com'
+  },
+  {
+    name: 'Airplan',
+    logo: null,
+    url: null
+  },
+  {
+    name: 'Superior Air S.A.',
+    logo: null,
+    url: null
+  },
+  {
+    name: 'University of Crete',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/University_of_Crete_Emblem.svg/200px-University_of_Crete_Emblem.svg.png',
+    url: 'https://www.uoc.gr'
+  }
+]
+
 const supportedAircraft = [
   { code: 'A320', name: 'Airbus A320' },
   { code: 'A220', name: 'Airbus A220' },
@@ -556,43 +579,40 @@ export default function Home() {
             viewport={{ once: true }}
             variants={staggerContainer}
           >
-            {/* Client logos will be added here - placeholder structure */}
-            <motion.div className="client-logo" variants={fadeInUp}>
-              <div className="client-logo-placeholder">
-                <Building2 size={32} />
-                <span>Client Logo</span>
-              </div>
-            </motion.div>
-            <motion.div className="client-logo" variants={fadeInUp}>
-              <div className="client-logo-placeholder">
-                <Building2 size={32} />
-                <span>Client Logo</span>
-              </div>
-            </motion.div>
-            <motion.div className="client-logo" variants={fadeInUp}>
-              <div className="client-logo-placeholder">
-                <Building2 size={32} />
-                <span>Client Logo</span>
-              </div>
-            </motion.div>
-            <motion.div className="client-logo" variants={fadeInUp}>
-              <div className="client-logo-placeholder">
-                <Building2 size={32} />
-                <span>Client Logo</span>
-              </div>
-            </motion.div>
-            <motion.div className="client-logo" variants={fadeInUp}>
-              <div className="client-logo-placeholder">
-                <Building2 size={32} />
-                <span>Client Logo</span>
-              </div>
-            </motion.div>
-            <motion.div className="client-logo" variants={fadeInUp}>
-              <div className="client-logo-placeholder">
-                <Building2 size={32} />
-                <span>Client Logo</span>
-              </div>
-            </motion.div>
+            {clients.map((client, idx) => (
+              <motion.div 
+                key={idx} 
+                className="client-logo" 
+                variants={fadeInUp}
+              >
+                {client.url ? (
+                  <a 
+                    href={client.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="client-link"
+                  >
+                    {client.logo ? (
+                      <img src={client.logo} alt={`${client.name} logo`} />
+                    ) : (
+                      <div className="client-logo-placeholder">
+                        <Building2 size={32} />
+                        <span>{client.name}</span>
+                      </div>
+                    )}
+                  </a>
+                ) : (
+                  client.logo ? (
+                    <img src={client.logo} alt={`${client.name} logo`} />
+                  ) : (
+                    <div className="client-logo-placeholder">
+                      <Building2 size={32} />
+                      <span>{client.name}</span>
+                    </div>
+                  )
+                )}
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>

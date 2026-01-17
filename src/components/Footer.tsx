@@ -124,7 +124,7 @@ export default function Footer() {
               className="org-logo"
               title="European Union Aviation Safety Agency"
             >
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/EASA_logo.svg/200px-EASA_logo.svg.png" alt="EASA" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/EASA_logo.svg" alt="EASA" />
             </a>
             <a 
               href="https://www.icao.int/" 
@@ -133,7 +133,7 @@ export default function Footer() {
               className="org-logo"
               title="International Civil Aviation Organization"
             >
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/ICAO_logo.svg/200px-ICAO_logo.svg.png" alt="ICAO" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/ICAO_logo.svg" alt="ICAO" />
             </a>
             <a 
               href="https://european-union.europa.eu/index_en" 
@@ -142,16 +142,16 @@ export default function Footer() {
               className="org-logo"
               title="European Union"
             >
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/200px-Flag_of_Europe.svg.png" alt="European Union" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg" alt="European Union" />
             </a>
             <a 
-              href="https://www.iso.org/" 
+              href="https://www.iata.org/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="org-logo"
-              title="International Organization for Standardization"
+              title="International Air Transport Association"
             >
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/ISO_logo.svg/200px-ISO_logo.svg.png" alt="ISO" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/IATA_logo.svg" alt="IATA" />
             </a>
           </div>
         </div>
