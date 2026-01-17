@@ -729,6 +729,29 @@
   font-size: var(--text-xs);
 }
 
+.client-logo-bg {
+  background: var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+}
+
+.client-logo-bg:hover {
+  background: var(--color-gray-300);
+}
+
+.client-logo-bg img {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] .client-logo-bg {
+  background: var(--color-gray-700);
+}
+
+[data-theme="dark"] .client-logo-bg:hover {
+  background: var(--color-gray-600);
+}
+
 /* CTA Section */
 .cta-section {
   padding: var(--space-20) 0;

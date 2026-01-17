@@ -170,23 +170,24 @@ const trainingTypes = ['EBT', 'CBTA', 'AQP', 'MPL', 'Type Rating', 'Recurrent', 
 const clients = [
   {
     name: 'Aegean Airlines',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Aegean_Airlines_Logo_2020.png/200px-Aegean_Airlines_Logo_2020.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2023/01/Aegean-Airlines-Logo-500x281.png',
     url: 'https://www.aegeanair.com'
   },
   {
     name: 'Airplan',
-    logo: null,
-    url: null
+    logo: 'https://www.airplanaviation.gr/portal/templates/yootheme/cache/23/logo-235d3f17.webp',
+    url: 'https://www.airplanaviation.gr'
   },
   {
     name: 'Superior Air S.A.',
-    logo: null,
-    url: null
+    logo: 'https://www.superior-air.gr/wp-content/uploads/2023/04/Superior-Air-Logo-Transparent.png',
+    url: 'https://www.superior-air.gr',
+    needsBackground: true
   },
   {
-    name: 'University of Crete',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/University_of_Crete_Emblem.svg/200px-University_of_Crete_Emblem.svg.png',
-    url: 'https://www.uoc.gr'
+    name: 'Foundation of Research',
+    logo: 'https://www.forth.gr/files/forth-ite-el.jpg',
+    url: 'https://www.forth.gr'
   }
 ]
 
@@ -564,7 +565,7 @@ export default function Home() {
               Trusted By Industry Leaders
             </motion.span>
             <motion.h2 variants={fadeInUp}>
-              SkyDynamics <span className="text-gradient">Clients</span>
+              Some of our <span className="text-gradient">clients</span>
             </motion.h2>
             <motion.p variants={fadeInUp}>
               Leading airlines and training organizations worldwide trust SkyDynamics 
@@ -582,7 +583,7 @@ export default function Home() {
             {clients.map((client, idx) => (
               <motion.div 
                 key={idx} 
-                className="client-logo" 
+                className={`client-logo ${client.needsBackground ? 'client-logo-bg' : ''}`}
                 variants={fadeInUp}
               >
                 {client.url ? (
