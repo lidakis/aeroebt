@@ -262,6 +262,24 @@
   color: var(--color-green-500);
 }
 
+.compliance-item-blue svg {
+  color: #0066b3;
+}
+
+.compliance-item-blue {
+  background: #f0f8fd;
+  border: 1px solid #a3d4f4;
+}
+
+[data-theme="dark"] .compliance-item-blue {
+  background: rgba(0, 102, 179, 0.15);
+  border-color: rgba(0, 102, 179, 0.3);
+}
+
+[data-theme="dark"] .compliance-item-blue svg {
+  color: #2d8fd5;
+}
+
 /* Mega Menu CTA */
 .mega-menu-cta {
   padding: var(--space-4);

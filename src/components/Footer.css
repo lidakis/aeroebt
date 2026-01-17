@@ -82,6 +82,16 @@
   border-radius: var(--radius-md);
 }
 
+.certification-badge-blue {
+  background: #dbeef9;
+  color: #1a3f5c;
+}
+
+[data-theme="dark"] .certification-badge-blue {
+  background: rgba(0, 102, 179, 0.2);
+  color: #2d8fd5;
+}
+
 /* Footer Sections */
 .footer-section h4 {
   font-size: var(--text-sm);

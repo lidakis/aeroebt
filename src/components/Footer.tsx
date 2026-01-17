@@ -49,7 +49,11 @@ export default function Footer() {
               </div>
               <div className="certification-badge">
                 <Award size={16} />
-                <span>EASA Certified</span>
+                <span>EASA Compliant</span>
+              </div>
+              <div className="certification-badge certification-badge-blue">
+                <Award size={16} />
+                <span>FAA Compliant</span>
               </div>
             </div>
           </div>

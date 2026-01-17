@@ -184,6 +184,26 @@
   flex-shrink: 0;
 }
 
+.certification-icon-blue {
+  background: #dbeef9;
+  color: #1a3f5c;
+}
+
+.certification-item-blue {
+  background: #f0f8fd;
+  border: 1px solid #a3d4f4;
+}
+
+[data-theme="dark"] .certification-icon-blue {
+  background: rgba(0, 102, 179, 0.2);
+  color: #2d8fd5;
+}
+
+[data-theme="dark"] .certification-item-blue {
+  background: rgba(0, 102, 179, 0.15);
+  border-color: rgba(0, 102, 179, 0.3);
+}
+
 .certification-item strong {
   display: block;
   font-weight: 600;

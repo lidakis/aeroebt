@@ -50,8 +50,9 @@ const solutions = [
 ]
 
 const complianceItems = [
-  { icon: Shield, text: 'EASA Certified' },
+  { icon: Shield, text: 'EASA Compliant' },
   { icon: FileCheck, text: 'ICAO Compliant' },
+  { icon: Award, text: 'FAA Compliant', isBlue: true },
   { icon: Lock, text: 'ISO 27001' },
   { icon: Award, text: 'Data Security' },
 ]
@@ -146,7 +147,7 @@ export default function Header() {
                       <div className="mega-menu-section-title">Compliance & Security</div>
                       <div className="mega-menu-compliance">
                         {complianceItems.map((item, idx) => (
-                          <div key={idx} className="compliance-item">
+                          <div key={idx} className={`compliance-item ${item.isBlue ? 'compliance-item-blue' : ''}`}>
                             <item.icon size={18} />
                             <span>{item.text}</span>
                           </div>

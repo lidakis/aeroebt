@@ -50,7 +50,8 @@ const contactOptions = [
 const certifications = [
   { icon: Shield, text: 'ISO 27001 Certified', desc: 'Enterprise data security' },
   { icon: Lock, text: 'GDPR Compliant', desc: 'EU data protection' },
-  { icon: Award, text: 'EASA Certified', desc: 'Aviation compliance' }
+  { icon: Award, text: 'EASA Compliant', desc: 'Aviation compliance' },
+  { icon: Award, text: 'FAA Compliant', desc: 'FAA aviation compliance', isBlue: true }
 ]
 
 export default function Contact() {
@@ -170,8 +171,8 @@ export default function Contact() {
               </motion.p>
               <motion.div className="certifications-list" variants={fadeInUp}>
                 {certifications.map((cert, idx) => (
-                  <div key={idx} className="certification-item">
-                    <div className="certification-icon">
+                  <div key={idx} className={`certification-item ${cert.isBlue ? 'certification-item-blue' : ''}`}>
+                    <div className={`certification-icon ${cert.isBlue ? 'certification-icon-blue' : ''}`}>
                       <cert.icon size={24} />
                     </div>
                     <div>

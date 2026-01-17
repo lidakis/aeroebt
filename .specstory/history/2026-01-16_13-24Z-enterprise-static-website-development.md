@@ -53052,3 +53052,987 @@ All pages now show the centered Privacy Policy and Terms of Use links in the foo
 
 ---
 
+_**User (2026-01-17 12:38Z)**_
+
+deploy online
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Building and deploying to GitHub Pages:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy
+```
+
+```
+yarn run v1.22.22
+$ tsc -b &amp;&amp; vite build
+vite v6.4.1 building for production...
+transforming...
+✓ 1984 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.66 kB │ gzip:   0.78 kB
+dist/assets/index-XsnYH8oY.css   75.97 kB │ gzip:  10.60 kB
+dist/assets/index-D48hD18p.js   446.04 kB │ gzip: 132.49 kB
+✓ built in 930ms
+Done in 2.57s.
+yarn run v1.22.22
+$ yarn build
+$ tsc -b &amp;&amp; vite build
+vite v6.4.1 building for production...
+transforming...
+✓ 1984 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.66 kB │ gzip:   0.78 kB
+dist/assets/index-XsnYH8oY.css   75.97 kB │ gzip:  10.60 kB
+dist/assets/index-D48hD18p.js   446.04 kB │ gzip: 132.49 kB
+✓ built in 952ms
+$ gh-pages -d dist
+Published
+Done in 6.09s.
+
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Committing and pushing changes:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && git add . && git commit -m "Add Privacy Policy and Terms of Use pages with legal protections; Group aircraft by manufacturer with logos; Enhance FSMS/TMS pages with interactive hover effects; Center footer legal links" && git push origin main</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && git add . && git commit -m "Add Privacy Policy and Terms of Use pages with legal protections; Group aircraft by manufacturer with logos; Enhance FSMS/TMS pages with interactive hover effects; Center footer legal links" && git push origin main
+```
+
+```
+[main 5995d70] Add Privacy Policy and Terms of Use pages with legal protections; Group aircraft by manufacturer with logos; Enhance FSMS/TMS pages with interactive hover effects; Center footer legal links
+ 13 files changed, 6328 insertions(+), 48 deletions(-)
+ create mode 100644 src/pages/PrivacyPolicy.css
+ create mode 100644 src/pages/PrivacyPolicy.tsx
+ create mode 100644 src/pages/TermsOfUse.tsx
+To https://github.com/lidakis/aeroebt.git
+   61d1484..5995d70  main -&gt; main
+
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+**Deployment complete**
+
+All changes are live on GitHub Pages. Summary:
+
+**Legal pages:**
+- Privacy Policy page (`/privacy`) with GDPR-compliant content
+- Terms of Use page (`/terms`) with legal protections:
+  - No affiliation disclaimers (EASA, ICAO, IATA, manufacturers)
+  - Broad limitation of liability clauses
+  - Indemnification provisions
+  - Regulatory compliance disclaimers
+- Footer links centered and visible on all pages
+
+**Aircraft section:**
+- Grouped by manufacturer (Airbus, Boeing, ATR, Embraer)
+- Manufacturer logos removed (as requested)
+- Clean, organized layout
+
+**FSMS & TMS pages:**
+- Interactive hover effects on feature cards
+- Animated feature chips with stagger animations
+- Enhanced stats, benefits, and workflow sections
+- Improved visual design matching the home page
+
+**Footer:**
+- Privacy Policy and Terms of Use links centered
+- Links appear on all pages (via Layout component)
+
+**Changes deployed:**
+- Created Privacy Policy and Terms of Use pages
+- Added routes and footer links
+- Enhanced FSMS/TMS pages with interactive elements
+- Grouped aircraft by manufacturer
+- Built and deployed to GitHub Pages
+- Committed and pushed to main branch
+
+Website is live at **http://aeroebt.skydynamics.aero/** with all updates, including legal protections for SkyDynamics and its directors.
+
+---
+
+_**User (2026-01-17 12:38Z)**_
+
+make easa certified tags = easa compliant and faa compliant another new tag n blue 
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Updating "EASA Certified" to "EASA Compliant" and adding a blue "FAA Compliant" tag. Searching for where it appears:
+
+
+---
+
+<tool-use data-tool-type="search" data-tool-name="grep">
+<details>
+<summary>Tool use: **grep** • Grep for "EASA Certified|EASA Compliant" in "/Users/lidakis/cursor_projects/NewAeroEBT website./src" • 4 matches</summary>
+
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `src/components/Footer.tsx` | `<span>EASA Certified</span>` | L52 |
+| `src/pages/Home.tsx` | `\{ icon: Shield, title: 'EASA Compliant', desc: 'Full compliance with European Aviation Safety Agency standards for EBT and CBTA training' \},` | L71 |
+| `src/components/Header.tsx` | `\{ icon: Shield, text: 'EASA Certified' \},` | L53 |
+| `src/pages/Contact.tsx` | `\{ icon: Award, text: 'EASA Certified', desc: 'Aviation compliance' \}` | L53 |
+
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+
+---
+
+
+Reviewing the files to understand the structure:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Header.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Contact.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking CSS for badge styling:
+
+
+---
+
+<tool-use data-tool-type="search" data-tool-name="grep">
+<details>
+<summary>Tool use: **grep** • Grep for "certification-badge|complianceItems" in "/Users/lidakis/cursor_projects/NewAeroEBT website./src" • 5 matches</summary>
+
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `src/components/Footer.css` | `.certification-badge \{` | L73 |
+| `src/components/Footer.tsx` | `<div className="certification-badge">` | L46 |
+| `src/components/Footer.tsx` | `<div className="certification-badge">` | L50 |
+| `src/components/Header.tsx` | `const complianceItems = [` | L52 |
+| `src/components/Header.tsx` | `\{complianceItems.map((item, idx) => (` | L148 |
+
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking Header CSS for compliance items styling:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Header.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Contact.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking certification styling in Contact.css:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Contact.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Updating all files: changing "EASA Certified" to "EASA Compliant" and adding a blue "FAA Compliant" tag.
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.tsx</summary>
+
+**Chunk 1**
+Lines added: 5, lines removed: 1
+
+```diff
+@@ -50,5 +50,9 @@
+                &lt;div className="certification-badge"&gt;
+                  &lt;Award size={16} /&gt;
+-                 &lt;span&gt;EASA Certified&lt;/span&gt;
++                 &lt;span&gt;EASA Compliant&lt;/span&gt;
++               &lt;/div&gt;
++               &lt;div className="certification-badge certification-badge-blue"&gt;
++                 &lt;Award size={16} /&gt;
++                 &lt;span&gt;FAA Compliant&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Header.tsx</summary>
+
+**Chunk 1**
+Lines added: 2, lines removed: 1
+
+```diff
+@@ -51,6 +51,7 @@
+  
+  const complianceItems = [
+-   { icon: Shield, text: 'EASA Certified' },
++   { icon: Shield, text: 'EASA Compliant' },
+    { icon: FileCheck, text: 'ICAO Compliant' },
++   { icon: Award, text: 'FAA Compliant', isBlue: true },
+    { icon: Lock, text: 'ISO 27001' },
+    { icon: Award, text: 'Data Security' },
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Header.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Updating Header.tsx to apply blue styling for FAA Compliant:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Header.tsx</summary>
+
+**Chunk 1**
+Lines added: 1, lines removed: 1
+
+```diff
+@@ -148,5 +148,5 @@
+                        &lt;div className="mega-menu-compliance"&gt;
+                          {complianceItems.map((item, idx) =&gt; (
+-                           &lt;div key={idx} className="compliance-item"&gt;
++                           &lt;div key={idx} className={&#96;compliance-item ${item.isBlue ? 'compliance-item-blue' : ''}&#96;}&gt;
+                              &lt;item.icon size={18} /&gt;
+                              &lt;span&gt;{item.text}&lt;/span&gt;
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Contact.tsx</summary>
+
+**Chunk 1**
+Lines added: 2, lines removed: 1
+
+```diff
+@@ -51,5 +51,6 @@
+    { icon: Shield, text: 'ISO 27001 Certified', desc: 'Enterprise data security' },
+    { icon: Lock, text: 'GDPR Compliant', desc: 'EU data protection' },
+-   { icon: Award, text: 'EASA Certified', desc: 'Aviation compliance' }
++   { icon: Award, text: 'EASA Compliant', desc: 'Aviation compliance' },
++   { icon: Award, text: 'FAA Compliant', desc: 'FAA aviation compliance', isBlue: true }
+  ]
+  
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Contact.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Finding where certifications are rendered in Contact.tsx:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Contact.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Updating Contact.tsx to apply blue styling:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Contact.tsx</summary>
+
+**Chunk 1**
+Lines added: 2, lines removed: 2
+
+```diff
+@@ -172,6 +172,6 @@
+                &lt;motion.div className="certifications-list" variants={fadeInUp}&gt;
+                  {certifications.map((cert, idx) =&gt; (
+-                   &lt;div key={idx} className="certification-item"&gt;
+-                     &lt;div className="certification-icon"&gt;
++                   &lt;div key={idx} className={&#96;certification-item ${cert.isBlue ? 'certification-item-blue' : ''}&#96;}&gt;
++                     &lt;div className={&#96;certification-icon ${cert.isBlue ? 'certification-icon-blue' : ''}&#96;}&gt;
+                        &lt;cert.icon size={24} /&gt;
+                      &lt;/div&gt;
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding CSS for blue badges:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.css</summary>
+
+**Chunk 1**
+Lines added: 10, lines removed: undefined
+
+```diff
+@@ -82,4 +82,14 @@
+    border-radius: var(--radius-md);
+  }
++ 
++ .certification-badge-blue {
++   background: var(--color-blue-100);
++   color: var(--color-blue-600);
++ }
++ 
++ [data-theme="dark"] .certification-badge-blue {
++   background: rgba(37, 99, 235, 0.2);
++   color: var(--color-blue-400);
++ }
+  
+  /* Footer Sections */
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Header.css</summary>
+
+**Chunk 1**
+Lines added: 14, lines removed: undefined
+
+```diff
+@@ -262,4 +262,18 @@
+    color: var(--color-green-500);
+  }
++ 
++ .compliance-item-blue svg {
++   color: var(--color-blue-500);
++ }
++ 
++ .compliance-item-blue {
++   background: var(--color-blue-50);
++   border: 1px solid var(--color-blue-200);
++ }
++ 
++ [data-theme="dark"] .compliance-item-blue {
++   background: rgba(37, 99, 235, 0.15);
++   border-color: rgba(37, 99, 235, 0.3);
++ }
+  
+  /* Mega Menu CTA */
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Contact.css</summary>
+
+**Chunk 1**
+Lines added: 20, lines removed: undefined
+
+```diff
+@@ -184,4 +184,24 @@
+    flex-shrink: 0;
+  }
++ 
++ .certification-icon-blue {
++   background: var(--color-blue-100);
++   color: var(--color-blue-600);
++ }
++ 
++ .certification-item-blue {
++   background: var(--color-blue-50);
++   border: 1px solid var(--color-blue-200);
++ }
++ 
++ [data-theme="dark"] .certification-icon-blue {
++   background: rgba(37, 99, 235, 0.2);
++   color: var(--color-blue-400);
++ }
++ 
++ [data-theme="dark"] .certification-item-blue {
++   background: rgba(37, 99, 235, 0.15);
++   border-color: rgba(37, 99, 235, 0.3);
++ }
+  
+  .certification-item strong {
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking if blue color variables exist in the CSS:
+
+
+---
+
+<tool-use data-tool-type="search" data-tool-name="grep">
+<details>
+<summary>Tool use: **grep** • Grep for "--color-blue|--color-primary" in "/Users/lidakis/cursor_projects/NewAeroEBT website./src/styles/index.css" • 35 matches</summary>
+
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `src/styles/index.css` | `--color-primary-900: #0a1628;` | L8 |
+| `src/styles/index.css` | `--color-primary-800: #0d2137;` | L9 |
+| `src/styles/index.css` | `--color-primary-700: #132e4a;` | L10 |
+| `src/styles/index.css` | `--color-primary-600: #1a3f5c;` | L11 |
+| `src/styles/index.css` | `--color-primary-500: #0066b3;` | L12 |
+| `src/styles/index.css` | `--color-primary-400: #2d8fd5;` | L13 |
+| `src/styles/index.css` | `--color-primary-300: #5aade6;` | L14 |
+| `src/styles/index.css` | `--color-primary-200: #a3d4f4;` | L15 |
+| `src/styles/index.css` | `--color-primary-100: #dbeef9;` | L16 |
+| `src/styles/index.css` | `--color-primary-50: #f0f8fd;` | L17 |
+| `src/styles/index.css` | `--color-primary-50: rgba(0, 102, 179, 0.1);` | L192 |
+| `src/styles/index.css` | `--color-primary-100: rgba(0, 102, 179, 0.15);` | L193 |
+| `src/styles/index.css` | `color: var(--color-primary-500);` | L249 |
+| `src/styles/index.css` | `color: var(--color-primary-500);` | L281 |
+| `src/styles/index.css` | `background: var(--color-primary-500);` | L313 |
+| `src/styles/index.css` | `background: var(--color-primary-600);` | L327 |
+| `src/styles/index.css` | `border-color: var(--color-primary-300);` | L345 |
+| `src/styles/index.css` | `color: var(--color-primary-600);` | L346 |
+| `src/styles/index.css` | `background: var(--color-primary-50);` | L347 |
+| `src/styles/index.css` | `color: var(--color-primary-500);` | L353 |
+| `src/styles/index.css` | `border: 1.5px solid var(--color-primary-400);` | L354 |
+| `src/styles/index.css` | `background: var(--color-primary-500);` | L358 |
+| `src/styles/index.css` | `border-color: var(--color-primary-500);` | L360 |
+| `src/styles/index.css` | `border-color: var(--color-primary-100);` | L382 |
+| `src/styles/index.css` | `background: linear-gradient(135deg, var(--color-primary-50) 0%, rgba(0, 132, 255, 0.08) 100%);` | L393 |
+| `src/styles/index.css` | `color: var(--color-primary-600);` | L394 |
+| `src/styles/index.css` | `border: 1px solid var(--color-primary-100);` | L401 |
+| `src/styles/index.css` | `background: var(--color-primary-100);` | L453 |
+| `src/styles/index.css` | `color: var(--color-primary-900);` | L454 |
+| `src/styles/index.css` | `outline: 2px solid var(--color-primary-500);` | L459 |
+| `src/styles/index.css` | `background: var(--color-primary-50);` | L501 |
+| `src/styles/index.css` | `color: var(--color-primary-600);` | L502 |
+| `src/styles/index.css` | `border: 1px solid var(--color-primary-100);` | L506 |
+| `src/styles/index.css` | `background: var(--color-primary-50);` | L545 |
+| `src/styles/index.css` | `color: var(--color-primary-500);` | L546 |
+
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking available color variables and adding blue if needed:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/styles/index.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Updating CSS to use standard blue colors for the FAA badge:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Footer.css</summary>
+
+**Chunk 1**
+Lines added: 4, lines removed: 4
+
+```diff
+@@ -84,11 +84,11 @@
+  
+  .certification-badge-blue {
+-   background: var(--color-blue-100);
+-   color: var(--color-blue-600);
++   background: #dbeef9;
++   color: #1a3f5c;
+  }
+  
+  [data-theme="dark"] .certification-badge-blue {
+-   background: rgba(37, 99, 235, 0.2);
+-   color: var(--color-blue-400);
++   background: rgba(0, 102, 179, 0.2);
++   color: #2d8fd5;
+  }
+  
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Header.css</summary>
+
+**Chunk 1**
+Lines added: 13, lines removed: 5
+
+```diff
+@@ -264,15 +264,23 @@
+  
+  .compliance-item-blue svg {
+-   color: var(--color-blue-500);
++   color: #0066b3;
+  }
+  
+  .compliance-item-blue {
+-   background: var(--color-blue-50);
+-   border: 1px solid var(--color-blue-200);
++   background: #f0f8fd;
++   border: 1px solid #a3d4f4;
+  }
+  
+  [data-theme="dark"] .compliance-item-blue {
+-   background: rgba(37, 99, 235, 0.15);
+-   border-color: rgba(37, 99, 235, 0.3);
++   background: rgba(0, 102, 179, 0.15);
++   border-color: rgba(0, 102, 179, 0.3);
++ }
++ 
++ .compliance-item-blue svg {
++   color: #0066b3;
++ }
++ 
++ [data-theme="dark"] .compliance-item-blue svg {
++   color: #2d8fd5;
+  }
+  
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Contact.css</summary>
+
+**Chunk 1**
+Lines added: 8, lines removed: 8
+
+```diff
+@@ -186,21 +186,21 @@
+  
+  .certification-icon-blue {
+-   background: var(--color-blue-100);
+-   color: var(--color-blue-600);
++   background: #dbeef9;
++   color: #1a3f5c;
+  }
+  
+  .certification-item-blue {
+-   background: var(--color-blue-50);
+-   border: 1px solid var(--color-blue-200);
++   background: #f0f8fd;
++   border: 1px solid #a3d4f4;
+  }
+  
+  [data-theme="dark"] .certification-icon-blue {
+-   background: rgba(37, 99, 235, 0.2);
+-   color: var(--color-blue-400);
++   background: rgba(0, 102, 179, 0.2);
++   color: #2d8fd5;
+  }
+  
+  [data-theme="dark"] .certification-item-blue {
+-   background: rgba(37, 99, 235, 0.15);
+-   border-color: rgba(37, 99, 235, 0.3);
++   background: rgba(0, 102, 179, 0.15);
++   border-color: rgba(0, 102, 179, 0.3);
+  }
+  
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Fixing the duplicate CSS rule in Header.css:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Header.css</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Removing the duplicate CSS rule:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/components/Header.css</summary>
+
+**Chunk 1**
+Lines added: undefined, lines removed: 4
+
+```diff
+@@ -276,8 +276,4 @@
+    border-color: rgba(0, 102, 179, 0.3);
+  }
+- 
+- .compliance-item-blue svg {
+-   color: #0066b3;
+- }
+  
+  [data-theme="dark"] .compliance-item-blue svg {
+```
+
+</details>
+
+</tool-use>
+
+---
+
+<tool-use data-tool-type="generic" data-tool-name="read_lints">
+<details>
+          <summary>Tool use: **read_lints** • Read lints for 3 files</summary>
+      
+Lint paths:
+
+- `src/components/Footer.tsx`
+- `src/components/Header.tsx`
+- `src/pages/Contact.tsx`
+
+Lint results
+
+
+**No lint errors found**
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Building to verify everything compiles:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build
+```
+
+```
+yarn run v1.22.22
+$ tsc -b &amp;&amp; vite build
+vite v6.4.1 building for production...
+transforming...
+✓ 1984 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.66 kB │ gzip:   0.78 kB
+dist/assets/index-CXJR7gWy.css   76.65 kB │ gzip:  10.74 kB
+dist/assets/index-CvFsAy5J.js   446.41 kB │ gzip: 132.60 kB
+✓ built in 928ms
+Done in 3.80s.
+
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+**Changes complete**
+
+**1. Changed "EASA Certified" to "EASA Compliant":**
+   - Footer.tsx — footer certification badge
+   - Header.tsx — compliance items in mega menu
+   - Contact.tsx — certifications section
+
+**2. Added "FAA Compliant" tag in blue:**
+   - Footer.tsx — new blue certification badge
+   - Header.tsx — added to compliance items with blue styling
+   - Contact.tsx — added to certifications list with blue styling
+
+**3. Blue styling applied:**
+   - Footer: `.certification-badge-blue` with blue background (#dbeef9) and text (#1a3f5c)
+   - Header: `.compliance-item-blue` with blue background and border
+   - Contact: `.certification-icon-blue` and `.certification-item-blue` with blue styling
+   - Dark mode support for all blue badges
+
+**Locations updated:**
+- Footer certifications section
+- Header mega menu compliance sidebar
+- Contact page certifications list
+
+Build successful. Ready to deploy. Should I deploy now?
+
+---
+
+_**User (2026-01-17 12:38Z)**_
+
+deploy
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Building and deploying to GitHub Pages:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd**</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
