@@ -47642,3 +47642,289 @@ Ready to deploy. Should I build and deploy now?
 
 ---
 
+_**User (2026-01-17 12:29Z)**_
+
+deploy online 
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Building and deploying to GitHub Pages:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && yarn build && yarn deploy
+```
+
+```
+yarn run v1.22.22
+$ tsc -b &amp;&amp; vite build
+vite v6.4.1 building for production...
+transforming...
+✓ 1981 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.66 kB │ gzip:   0.78 kB
+dist/assets/index-CX1cou_a.css   64.15 kB │ gzip:   9.39 kB
+dist/assets/index-CzjR0yCK.js   425.48 kB │ gzip: 127.16 kB
+✓ built in 925ms
+Done in 2.43s.
+yarn run v1.22.22
+$ yarn build
+$ tsc -b &amp;&amp; vite build
+vite v6.4.1 building for production...
+transforming...
+✓ 1981 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   1.66 kB │ gzip:   0.78 kB
+dist/assets/index-CX1cou_a.css   64.15 kB │ gzip:   9.39 kB
+dist/assets/index-CzjR0yCK.js   425.48 kB │ gzip: 127.16 kB
+✓ built in 858ms
+$ gh-pages -d dist
+Published
+Done in 5.91s.
+
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Committing and pushing changes:
+
+
+---
+
+<tool-use data-tool-type="shell" data-tool-name="run_terminal_cmd">
+<details><summary>Tool use: **run_terminal_cmd** • Run command: cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && git add . && git commit -m "Update client logos: Add Aegean Airlines, Airplan, Superior Air, Foundation of Research; Fix logo visibility with backgrounds; Update heading to 'Some of our clients'; Make footer organization logos colored; Add dark blue backgrounds for EASA and ICAO" && git push origin main</summary>
+
+```bash
+cd "/Users/lidakis/cursor_projects/NewAeroEBT website." && git add . && git commit -m "Update client logos: Add Aegean Airlines, Airplan, Superior Air, Foundation of Research; Fix logo visibility with backgrounds; Update heading to 'Some of our clients'; Make footer organization logos colored; Add dark blue backgrounds for EASA and ICAO" && git push origin main
+```
+
+```
+[main dc4b854] Update client logos: Add Aegean Airlines, Airplan, Superior Air, Foundation of Research; Fix logo visibility with backgrounds; Update heading to 'Some of our clients'; Make footer organization logos colored; Add dark blue backgrounds for EASA and ICAO
+ 4 files changed, 1281 insertions(+), 17 deletions(-)
+To https://github.com/lidakis/aeroebt.git
+   64e36c1..dc4b854  main -&gt; main
+
+```
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+**Deployment complete**
+
+Changes are live on GitHub Pages. Summary:
+
+**Clients section:**
+- Updated heading: "Some of our clients" (was "SkyDynamics Clients")
+- **Aegean Airlines** — colored logo from logos-world.net
+- **Airplan** — logo from airplanaviation.gr
+- **Superior Air S.A.** — logo with grey background
+- **Foundation of Research** — FORTH logo (replaced University of Crete)
+
+**Footer organization logos:**
+- Logos stay in color (no grayscale)
+- **EASA and ICAO** — dark blue backgrounds (#1e3a5f) for visibility
+- All logos linked to official websites
+
+**Changes deployed:**
+- Updated all client logos with correct URLs
+- Added backgrounds for logos that need them
+- Changed heading text
+- Made footer logos colored
+- Added dark blue backgrounds for EASA and ICAO
+- Built and deployed to GitHub Pages
+- Committed and pushed to main branch
+
+Website is live at **http://aeroebt.skydynamics.aero/** with all updates.
+
+---
+
+_**User (2026-01-17 12:29Z)**_
+
+in this part 16+
+Years of Aviation Excellence
+make it 25 years and also add owned data  centers specialized for airline regulatory compliance 
+ make a statement somewhere in the landing page to be visible well that we are the only company offers on premises data hosting for airlines and owned data centers specialized for airlines safety and mission cirticla fields . 
+
+---
+
+_**Agent (model default, mode Agent)**_
+
+
+
+---
+
+
+Updating the years stat, adding the new stat, and adding a statement about on-premises hosting. Checking the stats section first:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="search" data-tool-name="grep">
+<details>
+<summary>Tool use: **grep** • Grep for "Years of Aviation Excellence" in "/Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx" • 1 match</summary>
+
+Output mode: content
+
+
+| File | Content | Line |
+|------|------|------|
+| `src/pages/Home.tsx` | `\{ value: '16+', label: 'Years of Aviation Excellence' \},` | L64 |
+
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Updating the stats and adding a statement:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+**Chunk 1**
+Lines added: 3, lines removed: 2
+
+```diff
+@@ -62,7 +62,8 @@
+  
+  const stats = [
+-   { value: '16+', label: 'Years of Aviation Excellence' },
++   { value: '25', label: 'Years of Aviation Excellence' },
+    { value: '100%', label: 'Regulatory Compliance' },
+-   { value: '99.9%', label: 'System Availability' }
++   { value: '99.9%', label: 'System Availability' },
++   { value: 'Owned', label: 'Data Centers Specialized for Airline Regulatory Compliance' }
+  ]
+  
+```
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+
+
+Checking the hero section to add a statement about on-premises hosting:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding a badge in the hero section and a statement about on-premises hosting. Checking imports first:
+
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file">
+<details><summary>Tool use: **read_file** • Read file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+</details>
+</tool-use>
+
+---
+
+
+
+---
+
+
+Adding a badge for on-premises hosting after the existing badges:
+
+
+---
+
+<tool-use data-tool-type="write" data-tool-name="search_replace">
+
+<details><summary>Tool use: **search_replace** • Edit file: /Users/lidakis/cursor_projects/NewAeroEBT website./src/pages/Home.tsx</summary>
+
+Status: **loading**
+
+</details>
+
+</tool-use>
+
+---
+
+
+
+---
+

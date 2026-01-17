@@ -61,9 +61,10 @@ const solutions = [
 ]
 
 const stats = [
-  { value: '16+', label: 'Years of Aviation Excellence' },
+  { value: '25', label: 'Years of Aviation Excellence' },
   { value: '100%', label: 'Regulatory Compliance' },
-  { value: '99.9%', label: 'System Availability' }
+  { value: '99.9%', label: 'System Availability' },
+  { value: 'Owned', label: 'Data Centers Specialized for Airline Regulatory Compliance' }
 ]
 
 const complianceFeatures = [
@@ -227,6 +228,10 @@ export default function Home() {
                 <Lock size={14} />
                 ISO 27001 Certified
               </span>
+              <span className="hosting-badge">
+                <Server size={14} />
+                On-Premises Data Hosting Available
+              </span>
             </motion.div>
 
             <motion.h1 variants={fadeInUp}>
@@ -240,6 +245,15 @@ export default function Home() {
               Scenario Builder, powered by <strong>AeroBrain.ai</strong> – the most advanced 
               AI system for airlines.
             </motion.p>
+
+            <motion.div className="hero-hosting-statement" variants={fadeInUp}>
+              <Server size={18} />
+              <p>
+                <strong>The only company offering on-premises data hosting for airlines.</strong> 
+                Owned data centers specialized for airline safety and mission-critical fields, 
+                ensuring complete regulatory compliance and data sovereignty.
+              </p>
+            </motion.div>
 
             <motion.div className="hero-actions" variants={fadeInUp}>
               <a href="mailto:ebt@skydynamics.aero?subject=AeroEBT Demo Request" className="btn btn-primary btn-lg">
