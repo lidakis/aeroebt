@@ -311,6 +311,75 @@
   line-height: 1.65;
 }
 
+/* Supported Aircraft Section */
+.aircraft-section {
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  position: relative;
+}
+
+.aircraft-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-light) 20%, var(--border-light) 80%, transparent);
+}
+
+.aircraft-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--space-12);
+}
+
+.aircraft-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-6);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-card);
+  cursor: default;
+  min-width: 140px;
+}
+
+.aircraft-badge:hover {
+  border-color: var(--color-primary-300);
+  box-shadow: var(--shadow-card-hover);
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--color-primary-50) 100%);
+}
+
+.aircraft-badge svg {
+  color: var(--color-primary-500);
+  flex-shrink: 0;
+}
+
+.aircraft-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.aircraft-code {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.aircraft-name {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  line-height: 1.2;
+}
+
 /* Integrations Section */
 .integrations-section {
   background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
@@ -789,5 +858,41 @@
   .cta-actions .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .aircraft-list {
+    gap: var(--space-3);
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .aircraft-list::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .aircraft-list::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-full);
+  }
+
+  .aircraft-list::-webkit-scrollbar-thumb {
+    background: var(--color-primary-300);
+    border-radius: var(--radius-full);
+  }
+
+  .aircraft-badge {
+    min-width: 120px;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .aircraft-code {
+    font-size: var(--text-base);
+  }
+
+  .aircraft-name {
+    font-size: 10px;
   }
 }

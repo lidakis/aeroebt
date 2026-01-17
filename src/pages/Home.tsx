@@ -167,6 +167,19 @@ const integrations = [
 
 const trainingTypes = ['EBT', 'CBTA', 'AQP', 'MPL', 'Type Rating', 'Recurrent', 'Line Training', 'Ab Initio']
 
+const supportedAircraft = [
+  { code: 'A320', name: 'Airbus A320' },
+  { code: 'A220', name: 'Airbus A220' },
+  { code: 'ATR 72', name: 'ATR 72' },
+  { code: 'ATR 42-400', name: 'ATR 42-400' },
+  { code: 'ATR 42-600', name: 'ATR 42-600' },
+  { code: 'B777', name: 'Boeing 777' },
+  { code: 'B737', name: 'Boeing 737' },
+  { code: 'B787', name: 'Boeing 787' },
+  { code: 'A350', name: 'Airbus A350' },
+  { code: 'A380', name: 'Airbus A380' }
+]
+
 export default function Home() {
   return (
     <div className="home">
@@ -305,6 +318,55 @@ export default function Home() {
                 </div>
                 <h3>{feature.title}</h3>
                 <p>{feature.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Supported Aircraft */}
+      <section className="aircraft-section section-lg">
+        <div className="container">
+          <motion.div
+            className="section-header text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.span className="section-label" variants={fadeInUp}>
+              <Plane size={16} style={{ display: 'inline', marginRight: '8px' }} />
+              Ready-Made Training Data
+            </motion.span>
+            <motion.h2 variants={fadeInUp}>
+              Supported Aircraft with <span className="text-gradient">Existing Data</span>
+            </motion.h2>
+            <motion.p variants={fadeInUp}>
+              Pre-built scenarios, training documentation, aircraft manuals, failure databases, 
+              and event libraries are available for the following aircraft types.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            className="aircraft-list"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            {supportedAircraft.map((aircraft, idx) => (
+              <motion.div
+                key={idx}
+                className="aircraft-badge"
+                variants={fadeInUp}
+                whileHover={{ scale: 1.05, y: -4 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Plane size={20} />
+                <div className="aircraft-info">
+                  <span className="aircraft-code">{aircraft.code}</span>
+                  <span className="aircraft-name">{aircraft.name}</span>
+                </div>
               </motion.div>
             ))}
           </motion.div>
