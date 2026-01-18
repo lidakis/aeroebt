@@ -61,8 +61,17 @@
   margin-bottom: var(--space-6);
 }
 
+/* Hero Headline */
+.hero-headline {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-primary-600);
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.01em;
+}
+
 /* Hero Title */
-.hero h1 {
+.hero-title {
   margin-bottom: var(--space-6);
   color: var(--text-primary);
 }

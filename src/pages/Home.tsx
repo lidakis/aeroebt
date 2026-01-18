@@ -243,6 +243,14 @@ export default function Home() {
             animate="visible"
             variants={staggerContainer}
           >
+            <motion.h1 className="hero-headline" variants={fadeInUp}>
+              Achieve Regulatory Compliance
+            </motion.h1>
+            <motion.h2 className="hero-title" variants={fadeInUp}>
+              Enterprise Aviation<br />
+              <span className="text-gradient">Training Platform</span>
+            </motion.h2>
+
             <motion.div className="hero-badges" variants={fadeInUp}>
               <span className="compliance-badge">
                 <Shield size={14} />
@@ -257,11 +265,6 @@ export default function Home() {
                 On-Premises Data Hosting Available
               </span>
             </motion.div>
-
-            <motion.h1 variants={fadeInUp}>
-              Enterprise Aviation<br />
-              <span className="text-gradient">Training Platform</span>
-            </motion.h1>
 
             <motion.p className="hero-subtitle" variants={fadeInUp}>
               <strong>From instructors, for instructors.</strong> The only platform enabling 
