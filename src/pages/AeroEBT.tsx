@@ -5,6 +5,7 @@ import {
   FileText, BarChart3, Tablet, Shield, Lock, Brain, Cpu, Mail,
   Wrench, Link2, Globe, Cloud, ShieldCheck, Briefcase
 } from 'lucide-react'
+import SEO from '../components/SEO'
 import './ProductPage.css'
 
 const fadeInUp = {
@@ -131,8 +132,40 @@ const platformIntegrations = [
 ]
 
 export default function AeroEBT() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'AeroEBT - Evidence-Based Training Platform',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    description: 'The world\'s only Scenario Builder for Evidence-Based Training (EBT) and Competency-Based Training and Assessment (CBTA). Complete EBT and CBTA solution for Mixed to Full EBT implementation. EASA & ICAO compliant EBT and CBTA platform.',
+    keywords: 'EBT, evidence based training, CBTA, competency based training and assessment, EBT platform, EBT software, CBTA platform, CBTA software, EBT training, CBTA training, EBT scenario builder, CBTA scenario builder, EASA EBT, ICAO EBT, mixed EBT, full EBT, EBT implementation, CBTA implementation',
+    provider: {
+      '@type': 'Organization',
+      name: 'SkyDynamics G.P.',
+      url: 'https://skydynamics.aero'
+    },
+    featureList: [
+      'World\'s Only EBT Scenario Builder',
+      'CBTA Training Platform',
+      'EBT Instructor Tool',
+      'Mixed to Full EBT Implementation',
+      'EASA & ICAO Compliant EBT',
+      'CBTA Compliance',
+      'Automated EBT Compliance Reports',
+      'AeroBrain.ai Integration'
+    ]
+  }
+
   return (
     <div className="product-page">
+      <SEO
+        title="AeroEBT - EBT Platform | Evidence-Based Training (EBT) & CBTA Software"
+        description="AeroEBT is the world's only Scenario Builder for Evidence-Based Training (EBT) and Competency-Based Training and Assessment (CBTA). Complete EBT and CBTA solution for airlines. Mixed to Full EBT implementation. EASA & ICAO compliant EBT platform."
+        keywords="EBT, evidence based training, CBTA, competency based training and assessment, EBT platform, EBT software, CBTA platform, CBTA software, EBT training, CBTA training, EBT scenario builder, CBTA scenario builder, EASA EBT, ICAO EBT, mixed EBT, full EBT, EBT implementation, CBTA implementation, airline EBT, EBT solution, CBTA solution"
+        canonical="/#/aeroebt"
+        structuredData={structuredData}
+      />
       {/* Hero */}
       <section className="product-hero">
         <div className="container">

@@ -4,6 +4,7 @@ import {
   ArrowRight, Brain, Cpu, Cloud, Shield, TrendingUp, BarChart3,
   Layers, Database, GraduationCap, Mail
 } from 'lucide-react'
+import SEO from '../components/SEO'
 import './ProductPage.css'
 
 const fadeInUp = {
@@ -77,6 +78,12 @@ const useCases = [
 export default function AeroBrain() {
   return (
     <div className="product-page">
+      <SEO
+        title="AeroBrain.ai - AI Aviation Training Analytics | Deep Learning for Airlines"
+        description="The most advanced AI system for airlines. AeroBrain.ai provides predictive analytics, deep learning insights, and training optimization for aviation training. Exclusively integrated with AeroEBT."
+        keywords="AeroBrain, AI aviation, aviation AI, machine learning aviation, predictive analytics aviation, deep learning training, AI training optimization, aviation analytics, training intelligence, airline AI"
+        canonical="/#/aerobrain"
+      />
       {/* Hero */}
       <section className="product-hero">
         <div className="container">

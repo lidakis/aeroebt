@@ -4,6 +4,7 @@ import {
   ArrowRight, Building2, BookOpen, Award, FileText, BarChart3,
   Users, Clock, CheckCircle2, Settings, Calendar, Shield
 } from 'lucide-react'
+import SEO from '../components/SEO'
 import './ProductPage.css'
 
 const fadeInUp = {
@@ -53,6 +54,12 @@ const benefits = [
 export default function TMS() {
   return (
     <div className="product-page tms-page">
+      <SEO
+        title="TMS - Training Management System for EBT & CBTA | LMS Integration"
+        description="Complete training lifecycle management system for EBT and CBTA programs. TMS with LMS integration, EBT tracking, CBTA qualification management, compliance reports, and document management. EASA & ICAO compliant EBT training management."
+        keywords="TMS, training management system, EBT TMS, CBTA TMS, EBT training management, CBTA training management, LMS integration, EBT qualification tracking, CBTA qualification tracking, EBT compliance reports, CBTA compliance reports, training management software, EBT training system, CBTA training system"
+        canonical="/#/tms"
+      />
       {/* Hero */}
       <section className="product-hero">
         <div className="product-hero-bg">

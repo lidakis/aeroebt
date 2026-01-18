@@ -4,6 +4,7 @@ import {
   ArrowRight, Plane, Calendar, Users, FileText, BarChart3,
   Wrench, CheckCircle2
 } from 'lucide-react'
+import SEO from '../components/SEO'
 import './ProductPage.css'
 
 const fadeInUp = {
@@ -65,6 +66,12 @@ const stats = [
 export default function FSMS() {
   return (
     <div className="product-page fsms-page">
+      <SEO
+        title="FSMS - Flight School Management System | ATO Management"
+        description="Complete flight school management system for ATOs and training organizations. FSMS with resource scheduling, fleet management, student tracking, and financial management. EASA compliant."
+        keywords="FSMS, flight school management, ATO management, flight training management, simulator scheduling, fleet management, student tracking, training organization management, flight school software, aviation training management"
+        canonical="/#/fsms"
+      />
       {/* Hero */}
       <section className="product-hero">
         <div className="product-hero-bg">

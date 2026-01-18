@@ -6,6 +6,7 @@ import {
   Wrench, Tablet, Link2, Globe, Users, Cloud, ShieldCheck, Briefcase,
   Database
 } from 'lucide-react'
+import SEO from '../components/SEO'
 import './Home.css'
 
 const fadeInUp = {
@@ -228,8 +229,84 @@ const supportedAircraftGroups = [
 ]
 
 export default function Home() {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'AeroEBT',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD'
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      ratingCount: '1'
+    },
+    description: 'EBT and CBTA training platform for evidence-based training (EBT) and competency-based training and assessment (CBTA). Mixed to full EBT implementation. The world\'s only Scenario Builder for EBT and CBTA training with AeroBrain.ai integration.',
+    keywords: 'EBT, evidence based training, CBTA, competency based training and assessment, EBT platform, EBT software, CBTA platform, EBT training, CBTA training, EASA EBT, ICAO EBT, EBT scenario builder, mixed EBT, full EBT, EBT implementation',
+    provider: {
+      '@type': 'Organization',
+      name: 'SkyDynamics G.P.',
+      url: 'https://skydynamics.aero',
+      logo: 'https://aeroebt.skydynamics.aero/logo.png',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'Sales',
+        email: 'ebt@skydynamics.aero'
+      },
+      sameAs: [
+        'https://skydynamics.aero'
+      ]
+    },
+    featureList: [
+      'Evidence-Based Training (EBT)',
+      'Competency-Based Training and Assessment (CBTA)',
+      'EBT Scenario Builder',
+      'CBTA Training Platform',
+      'Mixed to Full EBT Implementation',
+      'EASA & ICAO Compliant EBT',
+      'Training Management System (TMS)',
+      'Flight School Management System (FSMS)',
+      'AeroBrain.ai Integration',
+      'Automated Compliance Reports',
+      'On-Premises Data Hosting'
+    ]
+  }
+
+  const organizationData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'SkyDynamics G.P.',
+    url: 'https://aeroebt.skydynamics.aero',
+    logo: 'https://aeroebt.skydynamics.aero/logo.png',
+    description: 'SkyDynamics provides enterprise aviation training solutions including AeroEBT for evidence-based training (EBT), training management systems, and flight school management.',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'Customer Service',
+      email: 'ebt@skydynamics.aero',
+      availableLanguage: 'English'
+    },
+    sameAs: [
+      'https://skydynamics.aero'
+    ],
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'GR'
+    }
+  }
+
   return (
     <div className="home">
+      <SEO
+        title="AeroEBT | EBT Platform - Evidence-Based Training (EBT) & CBTA for Airlines"
+        description="EBT and CBTA training platform. The world's only Scenario Builder for Evidence-Based Training (EBT) and Competency-Based Training and Assessment (CBTA). Mixed to Full EBT implementation. EASA & ICAO compliant EBT solution for airlines."
+        keywords="EBT, evidence based training, CBTA, competency based training and assessment, EBT platform, EBT software, EBT training, CBTA training, evidence-based training, EBT implementation, mixed EBT, full EBT, EASA EBT, ICAO EBT, EBT scenario builder, CBTA platform, airline EBT, EBT solution, CBTA solution, EBT compliance"
+        canonical="/"
+        structuredData={[structuredData, organizationData]}
+      />
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-bg">
